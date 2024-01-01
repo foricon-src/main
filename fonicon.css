@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fonicon';
-  src: url('../font/fonicon.ttf') format('truetype');
+  src: url('https://namdev23.github.io/Fonicon/fonicon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
