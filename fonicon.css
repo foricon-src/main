@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'fonicon';
+  src: url('../font/fonicon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+fonicon[icon^="fon-"]::before {
+  font-family: "fonicon";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+fonicon[animation="spin"] {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotateZ(0)}
+  100% {transform: rotateZ(360deg)}
+}
+
+fonicon[icon$="bars"]::before { content: "\f000";}
+fonicon[icon$="folder-open-outline"]::before { content: "\f001";}
+fonicon[icon$="folder-outline"]::before { content: "\f002";}
+fonicon[icon$="grid-4-outline"]::before { content: "\f003";}
+fonicon[icon$="house-2-outline"]::before { content: '\f004'; }
+fonicon[icon$="house-outline"]::before { content: '\f005'; }
+fonicon[icon$="magnifying-glass"]::before { content: '\f006'; }
+fonicon[icon$="towers-outline"]::before { content: '\f007'; }
