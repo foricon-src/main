@@ -17,13 +17,127 @@ fonicon[icon^="fon-"]::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-fonicon[animation="spin"] {
-  animation: spin 1.5s linear infinite;
+
+fonicon {
+  animation: ease infinite;
+}
+
+fonicon[animation*="-xxslow"] {
+  animation-duration: 3s;
+}
+fonicon[animation*="-xslow"] {
+  animation-duration: 2.5s;
+}
+fonicon[animation*="-slow"] {
+  animation-duration: 2s;
+}
+fonicon[animation*="-semislow"] {
+  animation-duration: 1.5s;
+}
+fonicon[animation*="-semifast"] {
+  animation-duration: .75s;
+}
+fonicon[animation*="-fast"] {
+  animation-duration: .5s;
+}
+fonicon[animation*="-xfast"] {
+  animation-duration: .25s;
+}
+fonicon[animation*="-xxfast"] {
+  animation-duration: .125s;
+}
+fonicon[animation$="-reverse"] {
+  animation-fill-mode: backwards;
+}
+
+fonicon[animation^="spin"] {
+  animation-name: spin;
+  animation-timing-function: linear;
+}
+fonicon[animation^="ltfade"] {
+  animation-name: ltfade;
+}
+fonicon[animation^="mdfade"] {
+  animation-name: mdfade;
+}
+fonicon[animation^="hvfade"] {
+  animation-name: hvfade;
+}
+fonicon[animation^="ulfade"] {
+  animation-name: ulfade;
+}
+fonicon[animation^="smallerbeat"] {
+  animation-name: smallerbeat;
+}
+fonicon[animation^="blbeat"] {
+  animation-name: blbeat;
+}
+fonicon[animation^="biggerbeat"] {
+  animation-name: biggerbeat;
+}
+fonicon[animation^="fadebeat"] {
+  animation-name: fadebeat;
+}
+fonicon[animation^="flipX"] {
+  animation-name: flipX;
+}
+fonicon[animation^="flipY"] {
+  animation-name: flipY;
 }
 
 @keyframes spin {
   0% {transform: rotateZ(0)}
   100% {transform: rotateZ(360deg)}
+}
+@keyframes ltfade {
+  0% {opacity: 1}
+  50% {opacity: 0.75}
+  100% {opacity: 1}
+}
+@keyframes mdfade {
+  0% {opacity: 1}
+  50% {opacity: 0.5}
+  100% {opacity: 1}
+}
+@keyframes hvfade {
+  0% {opacity: 1}
+  50% {opacity: 0.25}
+  100% {opacity: 1}
+}
+@keyframes ulfade {
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity: 1}
+}
+@keyframes smallerbeat {
+  0% {scale: 1}
+  50% {scale: .6}
+  100% {scale: 1}
+}
+@keyframes blbeat {
+  0% {scale: 1.2}
+  50% {scale: .8}
+  100% {scale: 1.2}
+}
+@keyframes biggerbeat {
+  0% {scale: 1.4}
+  50% {scale: 1}
+  100% {scale: 1.4}
+}
+@keyframes fadebeat {
+  0% {opacity: 1; scale: 1.2}
+  50% {opacity: 0.5; scale: .8}
+  100% {opacity: 1; scale: 1.2}
+}
+@keyframes flipX {
+  0% {transform: rotateX(0);}
+  50% {opacity: rotateX(180deg);}
+  100% {opacity: rotateX(360deg);}
+}
+@keyframes flipY {
+  0% {transform: rotateY(0);}
+  50% {opacity: rotateY(180deg);}
+  100% {opacity: rotateY(360deg);}
 }
 
 fonicon[icon$="bars"]::before { content: "\f000";}
