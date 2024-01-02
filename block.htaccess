@@ -1,2 +1,0 @@
-# Block access to file
-RedirectMatch 403 ^fonicon.css$
