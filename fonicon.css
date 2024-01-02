@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'fonicon';
-  src: url('fonicon.ttf') format('truetype');
+  font-family: 'Fonicon Icon';
+  src: url('fonicon-icon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 fonicon[icon^="fon-"]::before {
-  font-family: "fonicon";
+  font-family: "Fonicon Icon";
   font-style: normal;
   font-weight: normal;
   display: inline-block;
