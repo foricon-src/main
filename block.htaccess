@@ -1,2 +1,2 @@
 # Block access to file
-RedirectMatch 403 ^/folder/file.php$
+RedirectMatch 403 ^fonicon.css$
