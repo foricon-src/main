@@ -1,0 +1,5 @@
+# Block access to file
+<Files "fonicon.css">
+    Order allow,deny
+    Deny from all
+</Files>
