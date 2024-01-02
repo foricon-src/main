@@ -193,3 +193,4 @@ fonicon[icon$="house-2-outline"]::before { content: '\f004'; }
 fonicon[icon$="house-outline"]::before { content: '\f005'; }
 fonicon[icon$="magnifying-glass"]::before { content: '\f006'; }
 fonicon[icon$="towers-outline"]::before { content: '\f007'; }
+fonicon[icon$="grid-9-outline"]::before { content: '\f008'; }
