@@ -1,4 +1,2 @@
 # Block access to file
-<Files ~ "^.*">
-  Deny from all
-</Files>
+RedirectMatch 403 ^/folder/file.php$
