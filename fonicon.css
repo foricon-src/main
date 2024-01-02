@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fonicon';
-  src: url('https://namdev23.github.io/Fonicon/fonicon.ttf') format('truetype');
+  src: url('fonicon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -46,9 +46,6 @@ fonicon[animation*="-xfast"] {
 fonicon[animation*="-xxfast"] {
   animation-duration: .125s;
 }
-fonicon[animation$="-reverse"] {
-  animation-fill-mode: backwards;
-}
 
 fonicon[animation^="spin"] {
   animation-name: spin;
@@ -57,7 +54,7 @@ fonicon[animation^="spin"] {
 fonicon[animation^="ltfade"] {
   animation-name: ltfade;
 }
-fonicon[animation^="mdfade"] {
+fonicon[animation^="mdfade"], fonicon[animation^="fade"] {
   animation-name: mdfade;
 }
 fonicon[animation^="hvfade"] {
@@ -69,7 +66,7 @@ fonicon[animation^="ulfade"] {
 fonicon[animation^="smallerbeat"] {
   animation-name: smallerbeat;
 }
-fonicon[animation^="blbeat"] {
+fonicon[animation^="blbeat"], fonicon[animation^="beat"] {
   animation-name: blbeat;
 }
 fonicon[animation^="biggerbeat"] {
@@ -83,6 +80,54 @@ fonicon[animation^="flipX"] {
 }
 fonicon[animation^="flipY"] {
   animation-name: flipY;
+}
+
+fonicon[size="smallest"] {
+  font-size: .25em;
+}
+fonicon[size="smaller"] {
+  font-size: .5em;
+}
+fonicon[size="small"] {
+  font-size: .75em;
+}
+fonicon[size="large"] {
+  font-size: 1.25em;
+}
+fonicon[size="larger"] {
+  font-size: 1.5em;
+}
+fonicon[size="largerst"] {
+  font-size: 1.75em;
+}
+
+fonicon[scale="xsmaller"] {
+  scale: .5;
+}
+fonicon[scale="smaller"] {
+  scale: .75;
+}
+fonicon[scale="larger"] {
+  scale: 1.25;
+}
+fonicon[scale="xlarger"] {
+  scale: 1.5;
+}
+
+fonicon[rotation="90"] {
+  transform: rotateZ(90deg);
+}
+fonicon[rotation="180"] {
+  transform: rotateZ(180deg);
+}
+fonicon[rotation="270"] {
+  transform: rotateZ(270deg);
+}
+fonicon[rotation="flipX"] {
+  transform: rotateX(180deg);
+}
+fonicon[rotation="flipY"] {
+  transform: rotateY(180deg);
 }
 
 @keyframes spin {
