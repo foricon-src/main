@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Fonicon Icon';
-  src: url('fonicon-icon.ttf') format('truetype');
+  src: url('F164a0HJ2.ttf') format('woff2'),
+       url('zxQ93ui17.woff2') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
