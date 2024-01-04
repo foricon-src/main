@@ -199,4 +199,4 @@ fonicon[icon$="file-outline"]:before { content: '\f010'; }
 fonicon[icon$="file-code-outline"]:before { content: '\f011'; }
 fonicon[icon$="file-image-outline"]:before { content: '\f012'; }
 fonicon[icon$="file-lines-outline"]:before { content: '\f013'; }
-fonicon[icon$="angle-up"]:before { content: '\f014'; }
+fonicon[icon$="angle-up-outline"]:before { content: '\f014'; }
