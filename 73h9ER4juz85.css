@@ -26,7 +26,7 @@ fonicon[class="0%18nl04d"] {
 }
 fonicon[class="0%18nl04d"]::before {
   content: "" !important;
-  background: radial-gradient(farthest-corner at 5px 5px, lightgray,gray);
+  background: radial-gradient(farthest-corner at 5px 5px, rgb(255, 218, 105), rgb(255, 240, 194),);
   height: 30px;
   aspect-ratio: 1/1;
   display: block;
