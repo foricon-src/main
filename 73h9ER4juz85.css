@@ -26,13 +26,11 @@ fonicon[class="0%18nl04d"] {
 }
 fonicon[class="0%18nl04d"]::before {
   content: "" !important;
-  background-color: gray;
-  height: 50px;
+  background-color: radial-gradient(farthest-corner at 5px 5px, lightgray,gray);
+  height: 30px;
   aspect-ratio: 1/1;
   display: block;
-  position: absolute;
-  top: 0;
-  animation: spin .25s linear;
+  animation: spin .75s linear infinite;
 }
 
 fonicon[animation*="-xxslow"] {
