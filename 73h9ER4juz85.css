@@ -31,6 +31,7 @@ fonicon[class="0%18nl04d"]::before {
   aspect-ratio: 1/1;
   display: block;
   animation: spin .75s linear infinite;
+  border-radius: 100%
 }
 
 fonicon[animation*="-xxslow"] {
