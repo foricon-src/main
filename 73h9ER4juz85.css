@@ -21,13 +21,17 @@ fonicon[icon^="fon-"]::before {
 fonicon {
   animation: 1s ease infinite;
 }
+fonicon[class="0%18nl04d"] {
+  position: relative;
+}
 fonicon[class="0%18nl04d"]::before {
-  content: "";
+  content: "" !important;
   background-color: gray;
   height: 100%;
   aspect-ratio: 1/1;
   display: block;
   position: absolute;
+  top: 0;
   animation: spin 1s linear;
 }
 
