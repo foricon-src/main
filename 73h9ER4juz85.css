@@ -27,12 +27,12 @@ fonicon[class="0%18nl04d"] {
 fonicon[class="0%18nl04d"]::before {
   content: "" !important;
   background-color: gray;
-  height: 100%;
+  height: 50px;
   aspect-ratio: 1/1;
   display: block;
   position: absolute;
   top: 0;
-  animation: spin 1s linear;
+  animation: spin .25s linear;
 }
 
 fonicon[animation*="-xxslow"] {
