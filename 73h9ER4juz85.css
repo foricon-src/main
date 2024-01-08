@@ -26,8 +26,7 @@ fonicon[class="0%18nl04d"] {
 }
 fonicon[class="0%18nl04d"]::before {
   content: "\e835" !important;
-  background: radial-gradient(farthest-corner at 0 0, rgb(255, 218, 105), rgb(255, 240, 194));
-  animation: blbeat .75s infinite;
+  animation: spin .75s infinite;
 }
 
 fonicon[animation*="-xxslow"] {
@@ -58,6 +57,11 @@ fonicon[animation*="-xxfast"] {
 fonicon[animation^="spin"] {
   animation-name: spin;
   animation-timing-function: linear;
+}
+fonicon[animation^="spin-reverse"] {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
 }
 fonicon[animation^="ltfade"] {
   animation-name: ltfade;
