@@ -258,5 +258,5 @@ forio-icons[icon$="forio-notdef"]::before { content: '\e833'; } /* '' */
 forio-icons[icon$="forio-spinner-1p3"]::before { content: '\e834'; } /* '' */
 forio-icons[icon$="forio-spinner-3p4"]::before { content: '\e835'; } /* '' */
 forio-icons[icon$="forio-towers"][type="outline"]::before { content: '\e836'; } /* '' */
-forio-icons[icon$="forio-file-duo"][type^="duotone/filled"]::before { content: '\e837'; } /* '' */
-forio-icons[icon$="forio-file-duo"][type="duotone/filled"]::after { content: '\e838'; } /* '' */
+forio-icons[icon$="forio-file"][type^="duotone/filled"]::before { content: '\e837'; } /* '' */
+forio-icons[icon$="forio-file"][type="duotone/filled"]::after { content: '\e838'; } /* '' */
