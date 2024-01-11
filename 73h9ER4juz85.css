@@ -21,36 +21,36 @@ forio-icons[icon^="forio-"]::after {
   position: absolute;
 }
 
-fonicon {
+forio-icons {
   animation: 1s ease infinite;
 }
-fonicon[class="0%18nl04d"] {
+forio-icons[class="0%18nl04d"] {
   position: relative;
 }
-fonicon[class="0%18nl04d"]::before {
+forio-icons[class="0%18nl04d"]::before {
   content: "\e835" !important;
   animation: spin .75s infinite linear;
 }
-fonicon[class="0%18nl04d"]::after {
+forio-icons[class="0%18nl04d"]::after {
   display: none;
 }
 
-fonicon[animation*="-xxslow"] {
+forio-icons[animation*="-xxslow"] {
   animation-duration: 3s;
 }
-fonicon[animation*="-xslow"] {
+forio-icons[animation*="-xslow"] {
   animation-duration: 2.5s;
 }
-fonicon[animation*="-slow"] {
+forio-icons[animation*="-slow"] {
   animation-duration: 2s;
 }
-fonicon[animation*="-semislow"] {
+forio-icons[animation*="-semislow"] {
   animation-duration: 1.5s;
 }
-fonicon[animation*="-semifast"] {
+forio-icons[animation*="-semifast"] {
   animation-duration: .75s;
 }
-fonicon[animation*="-fast"] {
+forio-icons[animation*="-fast"] {
   animation-duration: .5s;
 }
 forio-icons[animation*="-xfast"] {
