@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-forio-icons[icon^="forio-"]::before, forio-icons[icon^="forio-"]::after {
+forio-icon[icon^="forio-"]::before, forio-icon[icon^="forio-"]::after {
   font-family: "Forio";
   font-style: normal;
   font-weight: normal;
@@ -17,134 +17,134 @@ forio-icons[icon^="forio-"]::before, forio-icons[icon^="forio-"]::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-forio-icons[icon^="forio-"]::after {
+forio-icon[icon^="forio-"]::after {
   position: absolute;
 }
 
-forio-icons {
+forio-icon {
   animation: 1s ease infinite;
 }
-forio-icons[class="0%18nl04d"] {
+forio-icon[class="0%18nl04d"] {
   position: relative;
 }
-forio-icons[class="0%18nl04d"]::before {
+forio-icon[class="0%18nl04d"]::before {
   content: "\e835" !important;
   animation: spin .75s infinite linear;
 }
-forio-icons[class="0%18nl04d"]::after {
+forio-icon[class="0%18nl04d"]::after {
   display: none;
 }
 
-forio-icons[animation*="-xxslow"] {
+forio-icon[animation*="-xxslow"] {
   animation-duration: 3s;
 }
-forio-icons[animation*="-xslow"] {
+forio-icon[animation*="-xslow"] {
   animation-duration: 2.5s;
 }
-forio-icons[animation*="-slow"] {
+forio-icon[animation*="-slow"] {
   animation-duration: 2s;
 }
-forio-icons[animation*="-semislow"] {
+forio-icon[animation*="-semislow"] {
   animation-duration: 1.5s;
 }
-forio-icons[animation*="-semifast"] {
+forio-icon[animation*="-semifast"] {
   animation-duration: .75s;
 }
-forio-icons[animation*="-fast"] {
+forio-icon[animation*="-fast"] {
   animation-duration: .5s;
 }
-forio-icons[animation*="-xfast"] {
+forio-icon[animation*="-xfast"] {
   animation-duration: .25s;
 }
-forio-icons[animation*="-xxfast"] {
+forio-icon[animation*="-xxfast"] {
   animation-duration: .125s;
 }
 
-forio-icons[animation^="spin"] {
+forio-icon[animation^="spin"] {
   animation-name: spin;
   animation-timing-function: linear;
 }
-forio-icons[animation^="spin-reverse"] {
+forio-icon[animation^="spin-reverse"] {
   animation-name: spin;
   animation-timing-function: linear;
   animation-fill-mode: backwards;
 }
-forio-icons[animation^="ltfade"] {
+forio-icon[animation^="ltfade"] {
   animation-name: ltfade;
 }
-forio-icons[animation^="mdfade"], forio-icons[animation^="fade"] {
+forio-icon[animation^="mdfade"], forio-icon[animation^="fade"] {
   animation-name: mdfade;
 }
-forio-icons[animation^="hvfade"] {
+forio-icon[animation^="hvfade"] {
   animation-name: hvfade;
 }
-forio-icons[animation^="ulfade"] {
+forio-icon[animation^="ulfade"] {
   animation-name: ulfade;
 }
-forio-icons[animation^="smallerbeat"] {
+forio-icon[animation^="smallerbeat"] {
   animation-name: smallerbeat;
 }
-forio-icons[animation^="blbeat"], forio-icons[animation^="beat"] {
+forio-icon[animation^="blbeat"], forio-icon[animation^="beat"] {
   animation-name: blbeat;
 }
-forio-icons[animation^="biggerbeat"] {
+forio-icon[animation^="biggerbeat"] {
   animation-name: biggerbeat;
 }
-forio-icons[animation^="fadebeat"] {
+forio-icon[animation^="fadebeat"] {
   animation-name: fadebeat;
 }
-forio-icons[animation^="flipX"] {
+forio-icon[animation^="flipX"] {
   animation-name: flipX;
 }
-forio-icons[animation^="flipY"] {
+forio-icon[animation^="flipY"] {
   animation-name: flipY;
 }
 
-forio-icons[size="smallest"] {
+forio-icon[size="smallest"] {
   font-size: .25em !important;
 }
-forio-icons[size="smaller"] {
+forio-icon[size="smaller"] {
   font-size: .5em !important;
 }
-forio-icons[size="small"] {
+forio-icon[size="small"] {
   font-size: .75em !important;
 }
-forio-icons[size="large"] {
+forio-icon[size="large"] {
   font-size: 1.25em !important;
 }
-forio-icons[size="larger"] {
+forio-icon[size="larger"] {
   font-size: 1.5em !important;
 }
-forio-icons[size="largerst"] {
+forio-icon[size="largerst"] {
   font-size: 1.75em !important;
 }
 
-forio-icons[scale="xsmaller"] {
+forio-icon[scale="xsmaller"] {
   scale: .5;
 }
-forio-icons[scale="smaller"] {
+forio-icon[scale="smaller"] {
   scale: .75;
 }
-forio-icons[scale="larger"] {
+forio-icon[scale="larger"] {
   scale: 1.25;
 }
-forio-icons[scale="xlarger"] {
+forio-icon[scale="xlarger"] {
   scale: 1.5;
 }
 
-forio-icons[rotation="90"] {
+forio-icon[rotation="90"] {
   transform: rotateZ(90deg);
 }
-forio-icons[rotation="180"] {
+forio-icon[rotation="180"] {
   transform: rotateZ(180deg);
 }
-forio-icons[rotation="270"] {
+forio-icon[rotation="270"] {
   transform: rotateZ(270deg);
 }
-forio-icons[rotation="flipX"] {
+forio-icon[rotation="flipX"] {
   transform: rotateX(180deg);
 }
-forio-icons[rotation="flipY"] {
+forio-icon[rotation="flipY"] {
   transform: rotateY(180deg);
 }
 
@@ -203,60 +203,60 @@ forio-icons[rotation="flipY"] {
   100% {transform: rotateY(360deg);}
 }
 
-forio-icons[icon$="forio-angle-up"][type="outline"]::before { content: '\e800'; } /* '' */
-forio-icons[icon$="forio-bars"]::before { content: '\e801'; } /* '' */
-forio-icons[icon$="forio-file"]::before { content: '\e802'; } /* '' */
-forio-icons[icon$="forio-file"][type="outline"]::before { content: '\e803'; } /* '' */
-forio-icons[icon$="forio-file-code"]::before { content: '\e804'; } /* '' */
-forio-icons[icon$="forio-file-code"][type="outline"]::before { content: '\e805'; } /* '' */
-forio-icons[icon$="forio-file-download"]::before { content: '\e806'; } /* '' */
-forio-icons[icon$="forio-file-download"][type="outline"]::before { content: '\e807'; } /* '' */
-forio-icons[icon$="forio-file-exclamation"]::before { content: '\e808'; } /* '' */
-forio-icons[icon$="forio-file-exclamation"][type="outline"]::before { content: '\e809'; } /* '' */
-forio-icons[icon$="forio-file-export"]::before { content: '\e80a'; } /* '' */
-forio-icons[icon$="forio-file-export"][type="outline"]::before { content: '\e80b'; } /* '' */
-forio-icons[icon$="forio-file-image"]::before { content: '\e80c'; } /* '' */
-forio-icons[icon$="forio-file-image"][type="outline"]::before { content: '\e80d'; } /* '' */
-forio-icons[icon$="forio-file-import"]::before { content: '\e80e'; } /* '' */
-forio-icons[icon$="forio-file-import"][type="outline"]::before { content: '\e80f'; } /* '' */
-forio-icons[icon$="forio-file-lines"]::before { content: '\e810'; } /* '' */
-forio-icons[icon$="forio-file-lines"][type="outline"]::before { content: '\e811'; } /* '' */
-forio-icons[icon$="forio-file-lock"]::before { content: '\e812'; } /* '' */
-forio-icons[icon$="forio-file-lock"][type="outline"]::before { content: '\e813'; } /* '' */
-forio-icons[icon$="forio-file-music"]::before { content: '\e814'; } /* '' */
-forio-icons[icon$="forio-file-music"][type="outline"]::before { content: '\e815'; } /* '' */
-forio-icons[icon$="forio-file-upload"]::before { content: '\e816'; } /* '' */
-forio-icons[icon$="forio-file-upload"][type="outline"]::before { content: '\e817'; } /* '' */
-forio-icons[icon$="forio-file-video"]::before { content: '\e818'; } /* '' */
-forio-icons[icon$="forio-file-video"][type="outline"]::before { content: '\e819'; } /* '' */
-forio-icons[icon$="forio-folder"]::before { content: '\e81a'; } /* '' */
-forio-icons[icon$="forio-folder"][type="outline"]::before { content: '\e81b'; } /* '' */
-forio-icons[icon$="forio-folder-bookmark"]::before { content: '\e81c'; } /* '' */
-forio-icons[icon$="forio-folder-bookmark"][type="outline"]::before { content: '\e81d'; } /* '' */
-forio-icons[icon$="forio-folder-bookmark-centered"]::before { content: '\e81e'; } /* '' */
-forio-icons[icon$="forio-folder-bookmark-centered"][type="outline"]::before { content: '\e81f'; } /* '' */
-forio-icons[icon$="forio-folder-download"]::before { content: '\e820'; } /* '' */
-forio-icons[icon$="forio-folder-download"][type="outline"]::before { content: '\e821'; } /* '' */
-forio-icons[icon$="forio-folder-extension"]::before { content: '\e822'; } /* '' */
-forio-icons[icon$="forio-folder-extension"][type="outline"]::before { content: '\e823'; } /* '' */
-forio-icons[icon$="forio-folder-image"]::before { content: '\e824'; } /* '' */
-forio-icons[icon$="forio-folder-image"][type="outline"]::before { content: '\e825'; } /* '' */
-forio-icons[icon$="forio-folder-lock"]::before { content: '\e826'; } /* '' */
-forio-icons[icon$="forio-folder-lock"][type="outline"]::before { content: '\e827'; } /* '' */
-forio-icons[icon$="forio-folder-music"]::before { content: '\e828'; } /* '' */
-forio-icons[icon$="forio-folder-music"][type="outline"]::before { content: '\e829'; } /* '' */
-forio-icons[icon$="forio-folder-open"]::before { content: '\e82a'; } /* '' */
-forio-icons[icon$="forio-folder-open"][type="outline"]::before { content: '\e82b'; } /* '' */
-forio-icons[icon$="forio-folder-video"]::before { content: '\e82c'; } /* '' */
-forio-icons[icon$="forio-folder-video"][type="outline"]::before { content: '\e82d'; } /* '' */
-forio-icons[icon$="forio-grid-4"][type="outline"]::before { content: '\e82e'; } /* '' */
-forio-icons[icon$="forio-grid-9"][type="outline"]::before { content: '\e82f'; } /* '' */
-forio-icons[icon$="forio-magnifying-glass"]::before { content: '\e830'; } /* '' */
-forio-icons[icon$="forio-house"][type="outline"]::before { content: '\e831'; } /* '' */
-forio-icons[icon$="forio-house-2"][type="outline"]::before { content: '\e832'; } /* '' */
-forio-icons[icon$="forio-notdef"]::before { content: '\e833'; } /* '' */
-forio-icons[icon$="forio-spinner-1p3"]::before { content: '\e834'; } /* '' */
-forio-icons[icon$="forio-spinner-3p4"]::before { content: '\e835'; } /* '' */
-forio-icons[icon$="forio-towers"][type="outline"]::before { content: '\e836'; } /* '' */
-forio-icons[icon$="forio-file"][type^="duotone/filled"]::before { content: '\e837'; } /* '' */
-forio-icons[icon$="forio-file"][type="duotone/filled"]::after { content: '\e838'; } /* '' */
+forio-icon[icon$="forio-angle-up"][type="outline"]::before { content: '\e800'; } /* '' */
+forio-icon[icon$="forio-bars"]::before { content: '\e801'; } /* '' */
+forio-icon[icon$="forio-file"]::before { content: '\e802'; } /* '' */
+forio-icon[icon$="forio-file"][type="outline"]::before { content: '\e803'; } /* '' */
+forio-icon[icon$="forio-file-code"]::before { content: '\e804'; } /* '' */
+forio-icon[icon$="forio-file-code"][type="outline"]::before { content: '\e805'; } /* '' */
+forio-icon[icon$="forio-file-download"]::before { content: '\e806'; } /* '' */
+forio-icon[icon$="forio-file-download"][type="outline"]::before { content: '\e807'; } /* '' */
+forio-icon[icon$="forio-file-exclamation"]::before { content: '\e808'; } /* '' */
+forio-icon[icon$="forio-file-exclamation"][type="outline"]::before { content: '\e809'; } /* '' */
+forio-icon[icon$="forio-file-export"]::before { content: '\e80a'; } /* '' */
+forio-icon[icon$="forio-file-export"][type="outline"]::before { content: '\e80b'; } /* '' */
+forio-icon[icon$="forio-file-image"]::before { content: '\e80c'; } /* '' */
+forio-icon[icon$="forio-file-image"][type="outline"]::before { content: '\e80d'; } /* '' */
+forio-icon[icon$="forio-file-import"]::before { content: '\e80e'; } /* '' */
+forio-icon[icon$="forio-file-import"][type="outline"]::before { content: '\e80f'; } /* '' */
+forio-icon[icon$="forio-file-lines"]::before { content: '\e810'; } /* '' */
+forio-icon[icon$="forio-file-lines"][type="outline"]::before { content: '\e811'; } /* '' */
+forio-icon[icon$="forio-file-lock"]::before { content: '\e812'; } /* '' */
+forio-icon[icon$="forio-file-lock"][type="outline"]::before { content: '\e813'; } /* '' */
+forio-icon[icon$="forio-file-music"]::before { content: '\e814'; } /* '' */
+forio-icon[icon$="forio-file-music"][type="outline"]::before { content: '\e815'; } /* '' */
+forio-icon[icon$="forio-file-upload"]::before { content: '\e816'; } /* '' */
+forio-icon[icon$="forio-file-upload"][type="outline"]::before { content: '\e817'; } /* '' */
+forio-icon[icon$="forio-file-video"]::before { content: '\e818'; } /* '' */
+forio-icon[icon$="forio-file-video"][type="outline"]::before { content: '\e819'; } /* '' */
+forio-icon[icon$="forio-folder"]::before { content: '\e81a'; } /* '' */
+forio-icon[icon$="forio-folder"][type="outline"]::before { content: '\e81b'; } /* '' */
+forio-icon[icon$="forio-folder-bookmark"]::before { content: '\e81c'; } /* '' */
+forio-icon[icon$="forio-folder-bookmark"][type="outline"]::before { content: '\e81d'; } /* '' */
+forio-icon[icon$="forio-folder-bookmark-centered"]::before { content: '\e81e'; } /* '' */
+forio-icon[icon$="forio-folder-bookmark-centered"][type="outline"]::before { content: '\e81f'; } /* '' */
+forio-icon[icon$="forio-folder-download"]::before { content: '\e820'; } /* '' */
+forio-icon[icon$="forio-folder-download"][type="outline"]::before { content: '\e821'; } /* '' */
+forio-icon[icon$="forio-folder-extension"]::before { content: '\e822'; } /* '' */
+forio-icon[icon$="forio-folder-extension"][type="outline"]::before { content: '\e823'; } /* '' */
+forio-icon[icon$="forio-folder-image"]::before { content: '\e824'; } /* '' */
+forio-icon[icon$="forio-folder-image"][type="outline"]::before { content: '\e825'; } /* '' */
+forio-icon[icon$="forio-folder-lock"]::before { content: '\e826'; } /* '' */
+forio-icon[icon$="forio-folder-lock"][type="outline"]::before { content: '\e827'; } /* '' */
+forio-icon[icon$="forio-folder-music"]::before { content: '\e828'; } /* '' */
+forio-icon[icon$="forio-folder-music"][type="outline"]::before { content: '\e829'; } /* '' */
+forio-icon[icon$="forio-folder-open"]::before { content: '\e82a'; } /* '' */
+forio-icon[icon$="forio-folder-open"][type="outline"]::before { content: '\e82b'; } /* '' */
+forio-icon[icon$="forio-folder-video"]::before { content: '\e82c'; } /* '' */
+forio-icon[icon$="forio-folder-video"][type="outline"]::before { content: '\e82d'; } /* '' */
+forio-icon[icon$="forio-grid-4"][type="outline"]::before { content: '\e82e'; } /* '' */
+forio-icon[icon$="forio-grid-9"][type="outline"]::before { content: '\e82f'; } /* '' */
+forio-icon[icon$="forio-magnifying-glass"]::before { content: '\e830'; } /* '' */
+forio-icon[icon$="forio-house"][type="outline"]::before { content: '\e831'; } /* '' */
+forio-icon[icon$="forio-house-2"][type="outline"]::before { content: '\e832'; } /* '' */
+forio-icon[icon$="forio-notdef"]::before { content: '\e833'; } /* '' */
+forio-icon[icon$="forio-spinner-1p3"]::before { content: '\e834'; } /* '' */
+forio-icon[icon$="forio-spinner-3p4"]::before { content: '\e835'; } /* '' */
+forio-icon[icon$="forio-towers"][type="outline"]::before { content: '\e836'; } /* '' */
+forio-icon[icon$="forio-file"][type^="duotone/filled"]::before { content: '\e837'; } /* '' */
+forio-icon[icon$="forio-file"][type="duotone/filled"]::after { content: '\e838'; } /* '' */
