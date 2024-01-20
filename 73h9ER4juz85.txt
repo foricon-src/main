@@ -20,6 +20,7 @@ forio[icon^="forio-"]::before, forio[icon^="forio-"]::after {
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
+  display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
