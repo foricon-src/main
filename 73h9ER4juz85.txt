@@ -25,8 +25,10 @@ forio[icon^="forio-"]::before, forio[icon^="forio-"]::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-forio[type^="duotone/"]::before {
+forio[icon^="forio-"]::before, forio[type^="duotone/"]::before {
   color: var(--primary-color);
+}
+forio[type^="duotone/"]::before {
   opacity: var(--primary-opacity);
 }
 forio[type^="duotone/"]::after {
