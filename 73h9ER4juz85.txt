@@ -2,7 +2,7 @@
   --primary-color: inherit;
   --secondary-color: inherit;
   --primary-opacity: 1;
-  --secondary-opacity: 0.25;
+  --secondary-opacity: 0.5;
 }
 @font-face {
   font-family: 'Forio';
