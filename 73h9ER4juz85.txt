@@ -83,9 +83,7 @@ forio[animation^="spin"] {
   animation-timing-function: linear;
 }
 forio[animation^="spin-reverse"] {
-  animation-name: spin;
-  animation-timing-function: linear;
-  animation-fill-mode: backwards;
+  animation-direction: reverse;
 }
 forio[animation^="ltfade"] {
   animation-name: ltfade;
