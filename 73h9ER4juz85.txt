@@ -131,7 +131,7 @@ forio[size="large"] {
 forio[size="larger"] {
   font-size: 1.5em !important;
 }
-forio[size="largerst"] {
+forio[size="largest"] {
   font-size: 1.75em !important;
 }
 
