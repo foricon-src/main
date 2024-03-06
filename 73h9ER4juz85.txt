@@ -11,7 +11,7 @@
   font-style: normal;
 }
 foricon[icon^="foricon-"]::before, foricon[icon^="foricon-"]::after {
-  font-family: "foricon";
+  font-family: "Foricon Icons";
   font-style: normal;
   font-weight: normal;
   display: inline-block;
