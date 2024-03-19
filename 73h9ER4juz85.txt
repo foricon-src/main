@@ -251,7 +251,7 @@ foricon[icon="foricon-folder-bookmark"]::before  { content: '\e81c'; }
 foricon[icon="foricon-folder-bookmark"][type="duotone/filled"]::before  { content: '\e84d'; }
 foricon[icon="foricon-folder-bookmark"][type="duotone/filled"]::after  { content: '\e851'; }
 foricon[icon="foricon-folder-bookmark"][type="outlined"]::before { content: '\e81d'; }
-foricon[icon="foricon-folder-bookmark-centered"]::before, foricon[icon="foricon-folder-bookmark"][type="duotone/filled"]::after { content: '\e81e'; }
+foricon[icon="foricon-folder-bookmark-centered"]::before, foricon[icon="foricon-folder-bookmark-centered"][type="duotone/filled"]::after { content: '\e81e'; }
 foricon[icon="foricon-folder-bookmark-centered"][type="duotone/filled"]::before { content: '\e842'; }
 foricon[icon="foricon-folder-bookmark-centered"][type="outlined"]::before { content: '\e81f'; }
 foricon[icon="foricon-folder-download"]::before, foricon[icon="foricon-folder-download"][type="duotone/filled"]::after { content: '\e820'; }
