@@ -222,6 +222,8 @@ foricon[rotate="flipY"] {
 foricon[icon="foricon-bars"][type="outlined"]::before { content: '\e801'; }
 foricon[icon="foricon-brush"]::before { content: '\e85e'; }
 foricon[icon="foricon-brush"][type="outlined"]::before { content: '\e85f'; }
+foricon[icon="foricon-circle-half"]:before { content: '\e860'; }
+foricon[icon="foricon-eraser"]:before { content: '\e861'; }
 foricon[icon="foricon-file"]::before { content: '\e802'; }
 foricon[icon="foricon-file"][type="outlined"]::before { content: '\e803'; }
 foricon[icon="foricon-file"][type="duotone/filled"]::before { content: '\e837'; }
