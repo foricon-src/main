@@ -8,8 +8,10 @@ const gfi = document.getElementById("getForiconIcon");
 
 if (gfi == undefined) {
   console.error("Element with getForiconIcon is undefined");
-} else {
+}
+else {
   const u = gfi.getAttribute("userId");
+  gfi.remove();
   async function a() {
     const docs = await getDoc(doc(dbFirestore, "users", u));
     if (docs.exists()) {
@@ -37,14 +39,3 @@ if (gfi == undefined) {
   }
   a();
 }
-let f = document.querySelectorAll("foricon");
-f.forEach(async (e) => {
-  if (
-    e.dataset.loadingtoggle != "false" &&
-    e.dataset.loadingtoggle == undefined
-  ) {
-    e.classList.add("0%18nl04d");
-    await wait(Math.round(40 * Math.random()) / 10);
-    e.classList.remove("0%18nl04d");
-  }
-});
