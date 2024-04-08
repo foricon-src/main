@@ -1,14 +1,14 @@
 import { dbFirestore } from "https://forio-source.github.io/foricon-firebase/script.js";
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
-const getForiconIcon = document.getElementById("getForiconIcon");
+const gfi = document.getElementById("getForiconIcon");
 
-if (getForiconIcon == undefined) {
+if (gfi == undefined) {
   console.error("Cannot get import element");
 }
 else {
-  const u = getForiconIcon.getAttribute("userId");
-  async function get() {
+  const u = gfi.getAttribute("userId");
+  async function a() {
     try {
       const docs = await getDoc(doc(dbFirestore, "users", u));
       if (docs.exists()) {
@@ -29,11 +29,11 @@ else {
       console.error(error);
     }
   };
-  get();
+  a();
 }
 let f = document.querySelectorAll("foricon");
 f.forEach(async (e) => {
-  if (e.dataset.loadingtoggle != "false" || e.dataset.loadingtoggle == undefined) {
+  if (e.dataset.loadingtoggle != "false" && e.dataset.loadingtoggle == undefined) {
     e.classList.add("0%18nl04d");
     await wait(Math.round(40 * Math.random()) / 10);
     e.classList.remove("0%18nl04d");
