@@ -1,42 +1,48 @@
 import { dbFirestore } from "https://forio-source.github.io/foricon-firebase/script.js";
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import {
+  doc,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 const gfi = document.getElementById("getForiconIcon");
 
 if (gfi == undefined) {
   console.error("Cannot get import element");
-}
-else {
+} else {
   const u = gfi.getAttribute("userId");
   async function a() {
-    try {
-      const docs = await getDoc(doc(dbFirestore, "users", u));
-      if (docs.exists()) {
-        const d = docs.data(), xhr = new XMLHttpRequest(), va = "";
-        if (d.foriconPlus == false) {
-          xhr.open("GET", "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt", !0);
-          xhr.onreadystatechange = () => {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-              let s = document.createElement("style");
-              s.innerHTML = xhr.responseText;
-              document.querySelector("head").appendChild(e);
-            }
+    const docs = await getDoc(doc(dbFirestore, "users", u));
+    if (docs.exists()) {
+      const d = docs.data(),
+        xhr = new XMLHttpRequest(),
+        va = "";
+      if (d.foriconPlus == false) {
+        xhr.open(
+          "GET",
+          "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt",
+          !0
+        );
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            let s = document.createElement("style");
+            s.innerHTML = xhr.responseText;
+            document.querySelector("head").appendChild(s);
           }
-          do {
-            xhr.send();
-          } while (xhr.readyState !== 4 && xhr.status !== 200);
-        }
+        };
+        do {
+          xhr.send();
+        } while (xhr.readyState !== 4 && xhr.status !== 200);
       }
     }
-    catch (error) {
-      console.error(error);
-    }
-  };
+  }
   a();
 }
 let f = document.querySelectorAll("foricon");
 f.forEach(async (e) => {
-  if (e.dataset.loadingtoggle != "false" && e.dataset.loadingtoggle == undefined) {
+  if (
+    e.dataset.loadingtoggle != "false" &&
+    e.dataset.loadingtoggle == undefined
+  ) {
     e.classList.add("0%18nl04d");
     await wait(Math.round(40 * Math.random()) / 10);
     e.classList.remove("0%18nl04d");
