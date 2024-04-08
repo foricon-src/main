@@ -14,11 +14,11 @@ else {
       if (docs.exists()) {
         const d = docs.data(), xhr = new XMLHttpRequest(), va = "";
         if (d.foriconPlus == false) {
-          const css = await xhr.open("GET", "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt", !0);
-          css.onreadystatechange = () => {
+          await xhr.open("GET", "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt", !0);
+          xhr.onreadystatechange = () => {
             if (af.readyState == 4 && af.status == 200) {
-              let e = document.createElement("style");
-              e.innerHTML = xhr.responseText;
+              let s = document.createElement("style");
+              s.innerHTML = xhr.responseText;
               document.querySelector("head").appendChild(e);
             }
           }
