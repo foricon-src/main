@@ -14,7 +14,7 @@ else {
       if (docs.exists()) {
         const d = docs.data(), xhr = new XMLHttpRequest(), va = "";
         if (d.foriconPlus == false) {
-          await xhr.open("GET", "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt", !0);
+          xhr.open("GET", "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt", !0);
           xhr.onreadystatechange = () => {
             if (af.readyState == 4 && af.status == 200) {
               let s = document.createElement("style");
@@ -22,6 +22,9 @@ else {
               document.querySelector("head").appendChild(e);
             }
           }
+          do {
+            xhr.send();
+          } while (af.readyState !== 4 && af.status !== 200);
         }
       }
     }
