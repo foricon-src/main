@@ -16,7 +16,7 @@ else {
         if (d.foriconPlus == false) {
           xhr.open("GET", "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt", !0);
           xhr.onreadystatechange = () => {
-            if (af.readyState == 4 && af.status == 200) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
               let s = document.createElement("style");
               s.innerHTML = xhr.responseText;
               document.querySelector("head").appendChild(e);
@@ -24,7 +24,7 @@ else {
           }
           do {
             xhr.send();
-          } while (af.readyState !== 4 && af.status !== 200);
+          } while (xhr.readyState !== 4 && xhr.status !== 200);
         }
       }
     }
