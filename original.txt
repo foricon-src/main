@@ -36,6 +36,9 @@ else {
         } while (xhr.readyState !== 4 && xhr.status !== 200);
       }
     }
+    else {
+      console.error("Given account id is invalid")
+    }
   }
   a();
 }
