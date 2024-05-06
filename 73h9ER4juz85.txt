@@ -308,7 +308,7 @@ foricon[icon="foricon-grid-4"]::before { content: '\e862'; }
 foricon[icon="foricon-grid-4"][type="outlined"]::before { content: '\e82e'; }
 foricon[icon="foricon-grid-9"]::before { content: '\e863'; }
 foricon[icon="foricon-grid-9"][type="outlined"]::before { content: '\e82f'; }
-foricon[icon="foricon-layers"]::before { content: '\e800'; }
+foricon[icon="foricon-layers"]::before { content: '\e833'; }
 foricon[icon="foricon-layers"][type="outlined"]::before { content: '\e864'; }
 foricon[icon="foricon-magnifying-glass"]::before { content: '\e830'; }
 foricon[icon="foricon-house"]::before { content: '\e85b'; }
@@ -316,7 +316,7 @@ foricon[icon="foricon-house"][type="outlined"]::before { content: '\e831'; }
 foricon[icon="foricon-house-2"][type="outlined"]::before { content: '\e832'; }
 foricon[icon="foricon-house-simple"]::before { content: '\e85c'; }
 foricon[icon="foricon-house-simple"][type="outlined"]::before { content: '\e85d'; }
-foricon[icon="foricon-notdef"]::before { content: '\e833'; }
+foricon[icon="foricon-notdef"]::before { content: '\e800'; }
 foricon[icon="foricon-pen"]::before { content: '\e865'; }
 foricon[icon="foricon-pen"][type="outline"]::before { content: '\e866'; }
 foricon[icon="foricon-spinner-1p3"]::before { content: '\e834'; }
