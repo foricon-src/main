@@ -10,7 +10,7 @@
   font-weight: normal;
   font-style: normal;
 }
-foricon[icon^="foricon-"]::before, foricon[icon^="foricon-"]::after {
+f-icon[icon^=""]::before, f-icon[icon^=""]::after {
   font-family: "Foricon Icons";
   font-style: normal;
   font-weight: normal;
@@ -24,143 +24,143 @@ foricon[icon^="foricon-"]::before, foricon[icon^="foricon-"]::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-foricon[icon^="foricon-"]::before, foricon[type^="duotone/"]::before {
+f-icon[icon^=""]::before, f-icon[type^="duotone/"]::before {
   color: var(--primary-color);
 }
-foricon[type^="duotone/"]::before {
+f-icon[type^="duotone/"]::before {
   opacity: var(--primary-opacity);
 }
-foricon[type^="duotone/"]::after {
+f-icon[type^="duotone/"]::after {
   color: var(--secondary-color);
   opacity: var(--secondary-opacity);
   position: absolute;
   left: 0
 }
 
-foricon {
+f-icon {
   animation: 1s ease infinite;
   position: relative;
   display: inline-flex;
 }
-foricon[class="0%18nl04d"] {
+f-icon[class="0%18nl04d"] {
   position: relative;
 }
-foricon[class="0%18nl04d"]::before {
+f-icon[class="0%18nl04d"]::before {
   content: "\e835" !important;
   animation: spin .75s infinite linear;
 }
-foricon[class="0%18nl04d"]::after {
+f-icon[class="0%18nl04d"]::after {
   display: none;
 }
 
-foricon[animation*="-xxslow"] {
+f-icon[animation*="-xxslow"] {
   animation-duration: 3s;
 }
-foricon[animation*="-xslow"] {
+f-icon[animation*="-xslow"] {
   animation-duration: 2.5s;
 }
-foricon[animation*="-slow"] {
+f-icon[animation*="-slow"] {
   animation-duration: 2s;
 }
-foricon[animation*="-semislow"] {
+f-icon[animation*="-semislow"] {
   animation-duration: 1.5s;
 }
-foricon[animation*="-semifast"] {
+f-icon[animation*="-semifast"] {
   animation-duration: .75s;
 }
-foricon[animation*="-fast"] {
+f-icon[animation*="-fast"] {
   animation-duration: .5s;
 }
-foricon[animation*="-xfast"] {
+f-icon[animation*="-xfast"] {
   animation-duration: .25s;
 }
-foricon[animation*="-xxfast"] {
+f-icon[animation*="-xxfast"] {
   animation-duration: .125s;
 }
 
-foricon[animation^="spin"] {
+f-icon[animation^="spin"] {
   animation-name: spin;
   animation-timing-function: linear;
 }
-foricon[animation^="spin-reverse"] {
+f-icon[animation^="spin-reverse"] {
   animation-direction: reverse;
 }
-foricon[animation^="ltfade"] {
+f-icon[animation^="ltfade"] {
   animation-name: ltfade;
 }
-foricon[animation^="mdfade"], foricon[animation^="fade"] {
+f-icon[animation^="mdfade"], f-icon[animation^="fade"] {
   animation-name: mdfade;
 }
-foricon[animation^="hvfade"] {
+f-icon[animation^="hvfade"] {
   animation-name: hvfade;
 }
-foricon[animation^="ulfade"] {
+f-icon[animation^="ulfade"] {
   animation-name: ulfade;
 }
-foricon[animation^="smallerbeat"] {
+f-icon[animation^="smallerbeat"] {
   animation-name: smallerbeat;
 }
-foricon[animation^="blbeat"], foricon[animation^="beat"] {
+f-icon[animation^="blbeat"], f-icon[animation^="beat"] {
   animation-name: blbeat;
 }
-foricon[animation^="biggerbeat"] {
+f-icon[animation^="biggerbeat"] {
   animation-name: biggerbeat;
 }
-foricon[animation^="fadebeat"] {
+f-icon[animation^="fadebeat"] {
   animation-name: fadebeat;
 }
-foricon[animation^="flipX"] {
+f-icon[animation^="flipX"] {
   animation-name: flipX;
 }
-foricon[animation^="flipY"] {
+f-icon[animation^="flipY"] {
   animation-name: flipY;
 }
 
-foricon[size="smallest"] {
+f-icon[size="smallest"] {
   font-size: .25em !important;
 }
-foricon[size="smaller"] {
+f-icon[size="smaller"] {
   font-size: .5em !important;
 }
-foricon[size="small"] {
+f-icon[size="small"] {
   font-size: .75em !important;
 }
-foricon[size="large"] {
+f-icon[size="large"] {
   font-size: 1.25em !important;
 }
-foricon[size="larger"] {
+f-icon[size="larger"] {
   font-size: 1.5em !important;
 }
-foricon[size="largest"] {
+f-icon[size="largest"] {
   font-size: 1.75em !important;
 }
 
-foricon[scale="xsmaller"] {
+f-icon[scale="xsmaller"] {
   scale: .5;
 }
-foricon[scale="smaller"] {
+f-icon[scale="smaller"] {
   scale: .75;
 }
-foricon[scale="larger"] {
+f-icon[scale="larger"] {
   scale: 1.25;
 }
-foricon[scale="xlarger"] {
+f-icon[scale="xlarger"] {
   scale: 1.5;
 }
 
-foricon[rotate="90"] {
+f-icon[rotate="90"] {
   transform: rotateZ(90deg);
 }
-foricon[rotate="180"] {
+f-icon[rotate="180"] {
   transform: rotateZ(180deg);
 }
-foricon[rotate="270"] {
+f-icon[rotate="270"] {
   transform: rotateZ(270deg);
 }
-foricon[rotate="flipX"] {
+f-icon[rotate="flipX"] {
   transform: rotateX(180deg);
 }
-foricon[rotate="flipY"] {
+f-icon[rotate="flipY"] {
   transform: rotateY(180deg);
 }
 
@@ -219,106 +219,106 @@ foricon[rotate="flipY"] {
   100% {transform: rotateY(360deg);}
 }
 
-foricon[icon="foricon-bars"][type="outlined"]::before { content: '\e801'; }
-foricon[icon="foricon-brush"]::before { content: '\e85e'; }
-foricon[icon="foricon-brush"][type="outlined"]::before { content: '\e85f'; }
-foricon[icon="foricon-circle-half"]::before { content: '\e860'; }
-foricon[icon="foricon-eraser"]::before { content: '\e861'; }
-foricon[icon="foricon-file"]::before { content: '\e802'; }
-foricon[icon="foricon-file"][type="outlined"]::before { content: '\e803'; }
-foricon[icon="foricon-file"][type="duotone/filled"]::before { content: '\e837'; }
-foricon[icon="foricon-file"][type="duotone/filled"]::after { content: '\e838'; }
-foricon[icon="foricon-file-code"]::before { content: '\e804'; }
-foricon[icon="foricon-file-code"][type="outlined"]::before { content: '\e805'; }
-foricon[icon="foricon-file-code"][type="duotone/filled"]::before { content: '\e839'; }
-foricon[icon="foricon-file-code"][type="duotone/filled"]::after { content: '\e83a'; }
-foricon[icon="foricon-file-download"]::before { content: '\e806'; }
-foricon[icon="foricon-file-download"][type="outlined"]::before { content: '\e807'; }
-foricon[icon="foricon-file-download"][type="duotone/filled"]::before { content: '\e83b'; }
-foricon[icon="foricon-file-download"][type="duotone/filled"]::after { content: '\e83c'; }
-foricon[icon="foricon-file-exclamation"]::before { content: '\e808'; }
-foricon[icon="foricon-file-exclamation"][type="outlined"]::before { content: '\e809'; }
-foricon[icon="foricon-file-exclamation"][type="duotone/filled"]::before { content: '\e83d'; }
-foricon[icon="foricon-file-exclamation"][type="duotone/filled"]::after { content: '\e83e'; }
-foricon[icon="foricon-file-export"]::before { content: '\e80a'; }
-foricon[icon="foricon-file-export"][type="outlined"]::before { content: '\e80b'; }
-foricon[icon="foricon-file-export"][type="duotone/filled"]::before { content: '\e83f'; }
-foricon[icon="foricon-file-export"][type="duotone/filled"]::after { content: '\e84e'; }
-foricon[icon="foricon-file-image"]::before { content: '\e80c'; }
-foricon[icon="foricon-file-image"][type="outlined"]::before { content: '\e80d'; }
-foricon[icon="foricon-file-image"][type="duotone/filled"]::before { content: '\e840'; }
-foricon[icon="foricon-file-image"][type="duotone/filled"]::after { content: '\e841'; }
-foricon[icon="foricon-file-import"]::before { content: '\e80e'; }
-foricon[icon="foricon-file-import"][type="outlined"]::before { content: '\e80f'; }
-foricon[icon="foricon-file-import"][type="duotone/filled"]::before { content: '\e84f'; }
-foricon[icon="foricon-file-import"][type="duotone/filled"]::after { content: '\e850'; }
-foricon[icon="foricon-file-lines"]::before { content: '\e810'; }
-foricon[icon="foricon-file-lines"][type="outlined"]::before { content: '\e811'; }
-foricon[icon="foricon-file-lines"][type="duotone/filled"]::before { content: '\e843'; }
-foricon[icon="foricon-file-lines"][type="duotone/filled"]::after { content: '\e844'; }
-foricon[icon="foricon-file-lock"]::before { content: '\e812'; }
-foricon[icon="foricon-file-lock"][type="outlined"]::before { content: '\e813'; }
-foricon[icon="foricon-file-lock"][type="duotone/filled"]::before { content: '\e845'; }
-foricon[icon="foricon-file-lock"][type="duotone/filled"]::after { content: '\e846'; }
-foricon[icon="foricon-file-music"]::before { content: '\e814'; }
-foricon[icon="foricon-file-music"][type="outlined"]::before { content: '\e815'; }
-foricon[icon="foricon-file-music"][type="duotone/filled"]::before { content: '\e847'; }
-foricon[icon="foricon-file-music"][type="duotone/filled"]::after { content: '\e848'; }
-foricon[icon="foricon-file-upload"]::before { content: '\e816'; }
-foricon[icon="foricon-file-upload"][type="outlined"]::before { content: '\e817'; }
-foricon[icon="foricon-file-upload"][type="duotone/filled"]::before { content: '\e849'; }
-foricon[icon="foricon-file-upload"][type="duotone/filled"]::after { content: '\e84a'; }
-foricon[icon="foricon-file-video"]::before { content: '\e818'; }
-foricon[icon="foricon-file-video"][type="outlined"]::before { content: '\e819'; }
-foricon[icon="foricon-file-video"][type="duotone/filled"]::before { content: '\e84b'; }
-foricon[icon="foricon-file-video"][type="duotone/filled"]::after { content: '\e84c'; }
-foricon[icon="foricon-folder"]::before { content: '\e81a'; }
-foricon[icon="foricon-folder"][type="outlined"]::before { content: '\e81b'; }
-foricon[icon="foricon-folder-bookmark"]::before  { content: '\e81c'; }
-foricon[icon="foricon-folder-bookmark"][type="outlined"]::before { content: '\e81d'; }
-foricon[icon="foricon-folder-bookmark"][type="duotone/filled"]::before  { content: '\e84d'; }
-foricon[icon="foricon-folder-bookmark"][type="duotone/filled"]::after  { content: '\e851'; }
-foricon[icon="foricon-folder-bookmark-centered"]::before, foricon[icon="foricon-folder-bookmark-centered"][type="duotone/filled"]::after { content: '\e81e'; }
-foricon[icon="foricon-folder-bookmark-centered"][type="duotone/filled"]::before { content: '\e842'; }
-foricon[icon="foricon-folder-bookmark-centered"][type="outlined"]::before { content: '\e81f'; }
-foricon[icon="foricon-folder-download"]::before, foricon[icon="foricon-folder-download"][type="duotone/filled"]::after { content: '\e820'; }
-foricon[icon="foricon-folder-download"][type="duotone/filled"]::before { content: '\e852'; }
-foricon[icon="foricon-folder-download"][type="outlined"]::before { content: '\e821'; }
-foricon[icon="foricon-folder-extension"]::before, foricon[icon="foricon-folder-extension"][type="duotone/filled"]::after { content: '\e822'; }
-foricon[icon="foricon-folder-extension"][type="duotone/filled"]::before { content: '\e85a'; }
-foricon[icon="foricon-folder-extension"][type="outlined"]::before { content: '\e823'; }
-foricon[icon="foricon-folder-image"]::before { content: '\e824'; }
-foricon[icon="foricon-folder-image"][type="duotone/filled"]::before { content: '\e853'; }
-foricon[icon="foricon-folder-image"][type="duotone/filled"]::after { content: '\e854'; }
-foricon[icon="foricon-folder-image"][type="outlined"]::before { content: '\e825'; }
-foricon[icon="foricon-folder-lock"]::before, foricon[icon="foricon-folder-lock"][type="duotone/filled"]::after { content: '\e826'; }
-foricon[icon="foricon-folder-lock"][type="duotone/filled"]::before { content: '\e855'; }
-foricon[icon="foricon-folder-lock"][type="outlined"]::before { content: '\e827'; }
-foricon[icon="foricon-folder-music"]::before, foricon[icon="foricon-folder-music"][type="duotone/filled"]::after { content: '\e828'; }
-foricon[icon="foricon-folder-music"][type="duotone/filled"]::before { content: '\e856'; }
-foricon[icon="foricon-folder-music"][type="outlined"]::before { content: '\e829'; }
-foricon[icon="foricon-folder-open"]::before { content: '\e82a'; }
-foricon[icon="foricon-folder-open"][type="duotone/filled"]::before { content: '\e857'; }
-foricon[icon="foricon-folder-open"][type="duotone/filled"]::after { content: '\e858'; }
-foricon[icon="foricon-folder-open"][type="outlined"]::before { content: '\e82b'; }
-foricon[icon="foricon-folder-video"]::before, foricon[icon="foricon-folder-video"][type="duotone/filled"]:after { content: '\e82c'; }
-foricon[icon="foricon-folder-video"][type="duotone/filled"]::before { content: '\e859'; }
-foricon[icon="foricon-folder-video"][type="outlined"]::before { content: '\e82d'; }
-foricon[icon="foricon-grid-4"]::before { content: '\e862'; }
-foricon[icon="foricon-grid-4"][type="outlined"]::before { content: '\e82e'; }
-foricon[icon="foricon-grid-9"]::before { content: '\e863'; }
-foricon[icon="foricon-grid-9"][type="outlined"]::before { content: '\e82f'; }
-foricon[icon="foricon-layers"]::before { content: '\e833'; }
-foricon[icon="foricon-layers"][type="outlined"]::before { content: '\e864'; }
-foricon[icon="foricon-magnifying-glass"]::before { content: '\e830'; }
-foricon[icon="foricon-house"]::before { content: '\e85b'; }
-foricon[icon="foricon-house"][type="outlined"]::before { content: '\e831'; }
-foricon[icon="foricon-house-2"][type="outlined"]::before { content: '\e832'; }
-foricon[icon="foricon-house-simple"]::before { content: '\e85c'; }
-foricon[icon="foricon-house-simple"][type="outlined"]::before { content: '\e85d'; }
-foricon[icon="foricon-notdef"]::before { content: '\e800'; }
-foricon[icon="foricon-pen"]::before { content: '\e865'; }
-foricon[icon="foricon-pen"][type="outline"]::before { content: '\e866'; }
-foricon[icon="foricon-spinner-1p3"]::before { content: '\e834'; }
-foricon[icon="foricon-spinner-3p4"]::before { content: '\e835'; }
-foricon[icon="foricon-towers"][type="outlined"]::before { content: '\e836'; }
+f-icon[icon="bars"][type="outlined"]::before { content: '\e801'; }
+f-icon[icon="brush"]::before { content: '\e85e'; }
+f-icon[icon="brush"][type="outlined"]::before { content: '\e85f'; }
+f-icon[icon="circle-half"]::before { content: '\e860'; }
+f-icon[icon="eraser"]::before { content: '\e861'; }
+f-icon[icon="file"]::before { content: '\e802'; }
+f-icon[icon="file"][type="outlined"]::before { content: '\e803'; }
+f-icon[icon="file"][type="duotone/filled"]::before { content: '\e837'; }
+f-icon[icon="file"][type="duotone/filled"]::after { content: '\e838'; }
+f-icon[icon="file-code"]::before { content: '\e804'; }
+f-icon[icon="file-code"][type="outlined"]::before { content: '\e805'; }
+f-icon[icon="file-code"][type="duotone/filled"]::before { content: '\e839'; }
+f-icon[icon="file-code"][type="duotone/filled"]::after { content: '\e83a'; }
+f-icon[icon="file-download"]::before { content: '\e806'; }
+f-icon[icon="file-download"][type="outlined"]::before { content: '\e807'; }
+f-icon[icon="file-download"][type="duotone/filled"]::before { content: '\e83b'; }
+f-icon[icon="file-download"][type="duotone/filled"]::after { content: '\e83c'; }
+f-icon[icon="file-exclamation"]::before { content: '\e808'; }
+f-icon[icon="file-exclamation"][type="outlined"]::before { content: '\e809'; }
+f-icon[icon="file-exclamation"][type="duotone/filled"]::before { content: '\e83d'; }
+f-icon[icon="file-exclamation"][type="duotone/filled"]::after { content: '\e83e'; }
+f-icon[icon="file-export"]::before { content: '\e80a'; }
+f-icon[icon="file-export"][type="outlined"]::before { content: '\e80b'; }
+f-icon[icon="file-export"][type="duotone/filled"]::before { content: '\e83f'; }
+f-icon[icon="file-export"][type="duotone/filled"]::after { content: '\e84e'; }
+f-icon[icon="file-image"]::before { content: '\e80c'; }
+f-icon[icon="file-image"][type="outlined"]::before { content: '\e80d'; }
+f-icon[icon="file-image"][type="duotone/filled"]::before { content: '\e840'; }
+f-icon[icon="file-image"][type="duotone/filled"]::after { content: '\e841'; }
+f-icon[icon="file-import"]::before { content: '\e80e'; }
+f-icon[icon="file-import"][type="outlined"]::before { content: '\e80f'; }
+f-icon[icon="file-import"][type="duotone/filled"]::before { content: '\e84f'; }
+f-icon[icon="file-import"][type="duotone/filled"]::after { content: '\e850'; }
+f-icon[icon="file-lines"]::before { content: '\e810'; }
+f-icon[icon="file-lines"][type="outlined"]::before { content: '\e811'; }
+f-icon[icon="file-lines"][type="duotone/filled"]::before { content: '\e843'; }
+f-icon[icon="file-lines"][type="duotone/filled"]::after { content: '\e844'; }
+f-icon[icon="file-lock"]::before { content: '\e812'; }
+f-icon[icon="file-lock"][type="outlined"]::before { content: '\e813'; }
+f-icon[icon="file-lock"][type="duotone/filled"]::before { content: '\e845'; }
+f-icon[icon="file-lock"][type="duotone/filled"]::after { content: '\e846'; }
+f-icon[icon="file-music"]::before { content: '\e814'; }
+f-icon[icon="file-music"][type="outlined"]::before { content: '\e815'; }
+f-icon[icon="file-music"][type="duotone/filled"]::before { content: '\e847'; }
+f-icon[icon="file-music"][type="duotone/filled"]::after { content: '\e848'; }
+f-icon[icon="file-upload"]::before { content: '\e816'; }
+f-icon[icon="file-upload"][type="outlined"]::before { content: '\e817'; }
+f-icon[icon="file-upload"][type="duotone/filled"]::before { content: '\e849'; }
+f-icon[icon="file-upload"][type="duotone/filled"]::after { content: '\e84a'; }
+f-icon[icon="file-video"]::before { content: '\e818'; }
+f-icon[icon="file-video"][type="outlined"]::before { content: '\e819'; }
+f-icon[icon="file-video"][type="duotone/filled"]::before { content: '\e84b'; }
+f-icon[icon="file-video"][type="duotone/filled"]::after { content: '\e84c'; }
+f-icon[icon="folder"]::before { content: '\e81a'; }
+f-icon[icon="folder"][type="outlined"]::before { content: '\e81b'; }
+f-icon[icon="folder-bookmark"]::before  { content: '\e81c'; }
+f-icon[icon="folder-bookmark"][type="outlined"]::before { content: '\e81d'; }
+f-icon[icon="folder-bookmark"][type="duotone/filled"]::before  { content: '\e84d'; }
+f-icon[icon="folder-bookmark"][type="duotone/filled"]::after  { content: '\e851'; }
+f-icon[icon="folder-bookmark-centered"]::before, f-icon[icon="folder-bookmark-centered"][type="duotone/filled"]::after { content: '\e81e'; }
+f-icon[icon="folder-bookmark-centered"][type="duotone/filled"]::before { content: '\e842'; }
+f-icon[icon="folder-bookmark-centered"][type="outlined"]::before { content: '\e81f'; }
+f-icon[icon="folder-download"]::before, f-icon[icon="folder-download"][type="duotone/filled"]::after { content: '\e820'; }
+f-icon[icon="folder-download"][type="duotone/filled"]::before { content: '\e852'; }
+f-icon[icon="folder-download"][type="outlined"]::before { content: '\e821'; }
+f-icon[icon="folder-extension"]::before, f-icon[icon="folder-extension"][type="duotone/filled"]::after { content: '\e822'; }
+f-icon[icon="folder-extension"][type="duotone/filled"]::before { content: '\e85a'; }
+f-icon[icon="folder-extension"][type="outlined"]::before { content: '\e823'; }
+f-icon[icon="folder-image"]::before { content: '\e824'; }
+f-icon[icon="folder-image"][type="duotone/filled"]::before { content: '\e853'; }
+f-icon[icon="folder-image"][type="duotone/filled"]::after { content: '\e854'; }
+f-icon[icon="folder-image"][type="outlined"]::before { content: '\e825'; }
+f-icon[icon="folder-lock"]::before, f-icon[icon="folder-lock"][type="duotone/filled"]::after { content: '\e826'; }
+f-icon[icon="folder-lock"][type="duotone/filled"]::before { content: '\e855'; }
+f-icon[icon="folder-lock"][type="outlined"]::before { content: '\e827'; }
+f-icon[icon="folder-music"]::before, f-icon[icon="folder-music"][type="duotone/filled"]::after { content: '\e828'; }
+f-icon[icon="folder-music"][type="duotone/filled"]::before { content: '\e856'; }
+f-icon[icon="folder-music"][type="outlined"]::before { content: '\e829'; }
+f-icon[icon="folder-open"]::before { content: '\e82a'; }
+f-icon[icon="folder-open"][type="duotone/filled"]::before { content: '\e857'; }
+f-icon[icon="folder-open"][type="duotone/filled"]::after { content: '\e858'; }
+f-icon[icon="folder-open"][type="outlined"]::before { content: '\e82b'; }
+f-icon[icon="folder-video"]::before, f-icon[icon="folder-video"][type="duotone/filled"]:after { content: '\e82c'; }
+f-icon[icon="folder-video"][type="duotone/filled"]::before { content: '\e859'; }
+f-icon[icon="folder-video"][type="outlined"]::before { content: '\e82d'; }
+f-icon[icon="grid-4"]::before { content: '\e862'; }
+f-icon[icon="grid-4"][type="outlined"]::before { content: '\e82e'; }
+f-icon[icon="grid-9"]::before { content: '\e863'; }
+f-icon[icon="grid-9"][type="outlined"]::before { content: '\e82f'; }
+f-icon[icon="layers"]::before { content: '\e833'; }
+f-icon[icon="layers"][type="outlined"]::before { content: '\e864'; }
+f-icon[icon="magnifying-glass"]::before { content: '\e830'; }
+f-icon[icon="house"]::before { content: '\e85b'; }
+f-icon[icon="house"][type="outlined"]::before { content: '\e831'; }
+f-icon[icon="house-2"][type="outlined"]::before { content: '\e832'; }
+f-icon[icon="house-simple"]::before { content: '\e85c'; }
+f-icon[icon="house-simple"][type="outlined"]::before { content: '\e85d'; }
+f-icon[icon="notdef"]::before { content: '\e800'; }
+f-icon[icon="pen"]::before { content: '\e865'; }
+f-icon[icon="pen"][type="outline"]::before { content: '\e866'; }
+f-icon[icon="spinner-1p3"]::before { content: '\e834'; }
+f-icon[icon="spinner-3p4"]::before { content: '\e835'; }
+f-icon[icon="towers"][type="outlined"]::before { content: '\e836'; }
