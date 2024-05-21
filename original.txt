@@ -28,42 +28,6 @@ else {
     toggleIcon(icon1Name, icon2Name) {
       this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name);
     }
-    getType() {
-      return ts[0];
-    }
-    setTyPe(typeName) {
-      this.setAttribute("type", `${typeName}/${this.getAttribute("type").split("/")[1]}`);
-    }
-    toggleType(type1Name, type2Name) {
-      const valid = ["regular", "duotone", "sharp"];
-      if (!valid.some(i => i == type1Name) || !valid.some(i => i == type2Name)) {
-        console.error("Invalid type name");
-      }
-      else {
-        if (this.getAttribute("type").split("/")[0] == type1Name) {
-          this.setAttribute("type", `${type2Name}/${this.getAttribute("type").split("/")[1]}`);
-        }
-        else {
-          this.setAttribute("type", `${type2Name}/${this.getAttribute("type").split("/")[1]}`);
-        };
-      };
-    }
-    getStyle() {
-      return this.getAttribute("type").split("/")[1];
-    }
-    setStyle(styleName) {
-      this.setAttribute("type", `${this.getAttribute("type").split("/")[0]}/${styleName}`);
-    }
-    toggleStyle() {
-      if (this.getAttribute("type").split("/")[1] == "filled") {
-        this.setAttribute("type", `${this.getAttribute("type").split("/")[0]}/outlined`);
-        this.getAttribute("type").split("/")[1] = "outlined";
-      }
-      else {
-        this.setAttribute("type", `${this.getAttribute("type").split("/")[0]}/filled`);
-        this.getAttribute("type").split("/")[1] = "filled";
-      };
-    }
   });
   async function a() {
     const docs = await getDoc(doc(dbFirestore, "users", u[1]));
