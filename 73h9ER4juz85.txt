@@ -32,12 +32,14 @@ f-icon::before, f-icon::after {
 f-icon::before {
   color: var(--primary-color);
 }
-f-icon[type^="duotone/"]::before {
+f-icon[type^="duotone/"]::before, f-icon[reversed][type^="duotone/"]::after {
   opacity: var(--primary-opacity);
 }
-f-icon[type^="duotone/"]::after {
+f-icon[type^="duotone/"]::after, f-icon[reversed][type^="duotone/"]::before {
   color: var(--secondary-color);
   opacity: var(--secondary-opacity);
+}
+f-icon[type^="duotone/"]::after {
   position: absolute;
   left: 0
 }
