@@ -329,8 +329,8 @@ f-icon[icon="magnifying-glass"]::before { content: '\e830'; }
 f-icon[icon="house"]::before { content: '\e85b'; }
 f-icon[icon="house"][type="outlined"]::before { content: '\e831'; }
 f-icon[icon="house-2"][type="outlined"]::before { content: '\e832'; }
-f-icon[icon="house-simple"]::before { content: '\e85c'; }
-f-icon[icon="house-simple"][type="outlined"]::before { content: '\e85d'; }
+f-icon[icon="house-door"]::before { content: '\e85c'; }
+f-icon[icon="house-door"][type="outlined"]::before { content: '\e85d'; }
 f-icon[icon="notdef"]::before { content: '\e800'; }
 f-icon[icon="pen"]::before { content: '\e865'; }
 f-icon[icon="pen"][type="outline"]::before { content: '\e866'; }
