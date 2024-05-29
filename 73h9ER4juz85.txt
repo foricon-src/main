@@ -89,14 +89,14 @@ f-icon[animation^="ulfade"] {
 f-icon[animation^="csfade"] {
   animation-name: csfade;
 }
-f-icon[animation^="smallerbeat"] {
-  animation-name: smallerbeat;
+f-icon[animation^="smbeat"] {
+  animation-name: smbeat;
 }
 f-icon[animation^="blbeat"], f-icon[animation^="beat"] {
   animation-name: blbeat;
 }
-f-icon[animation^="biggerbeat"] {
-  animation-name: biggerbeat;
+f-icon[animation^="bgbeat"] {
+  animation-name: bgbeat;
 }
 f-icon[animation^="fadebeat"] {
   animation-name: fadebeat;
