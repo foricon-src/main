@@ -183,7 +183,7 @@ f-icon[rotate="flipY"] {
   50% {opacity: 0}
   100% {opacity: 1}
 }
-@keyframes ulfade {
+@keyframes csfade {
   0% {opacity: var(--max)}
   50% {opacity: var(--min)}
   100% {opacity: var(--max)}
