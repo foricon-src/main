@@ -110,6 +110,9 @@ f-icon[animation^="flipX"] {
 f-icon[animation^="flipY"] {
   animation-name: flipY;
 }
+f-icon[animation^="flipXY"] {
+  animation-name: flipXY;
+}
 
 f-icon[size="smallest"] {
   font-size: .25em !important;
