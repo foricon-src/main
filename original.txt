@@ -23,10 +23,60 @@ else {
       return this.getAttribute("icon");
     }
     setIcon(iconName) {
-      this.setAttribute("icon", iconName);
+      if (iconName) {
+        this.setAttribute("icon", iconName);
+      }
+      else {
+        console.error("Argument cannot be null or undefined");
+      }
     }
     toggleIcon(icon1Name, icon2Name) {
-      this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name);
+      if (arguments.length == 2) {
+        this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name);
+      }
+      else {
+        console.error("There are must be 2 arguments")
+      }
+    }
+    getStyle() {
+      let splited = this.getAttribute("type").split("/");
+      return splited.length == 2 ? splited[1] : splited[0];
+    }
+    toggleStyle() {
+      let spl = this.getAttribute("type").split("/");
+      let tst = spl.length == 2 ?
+      `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled}`
+      :
+      `${spl[0] == "filled" ? "outlined" : "filled}`;
+      this.setAttribute("type", tst);
+    }
+    getType() {
+      let spl = this.getAttribute("type").split("/");
+      return spl.length == 2 ? spl[0] : null;
+    }
+    setType(typeName) {
+      if (typeName) {
+        let spl = this.getAttribute("type").split("/");
+        let style = spl.length == 2 ? spl[1] : spl[0];
+        let tst = typeName == "" ? style : `${typeName}/${style}`;
+        this.setAttribute("type", tst);
+      }
+      else {
+        console.error("Argument cannot be null or undefined");
+      };
+    }
+    toggleType(type1Name, type2Name) {
+      if (arguments.length == 2) {
+        let spl = this.getAttribute("type").split("/");
+        let tst = spl[0] == type1Name ? type2Name : type1Name;
+        if (tst != "") {
+          tst += "/";
+        };
+        this.setAttribute("type", `${tst}${spl[1]}`);
+      }
+      else {
+        console.error("There are must be 2 arguments");
+      };
     }
   });
   async function a() {
