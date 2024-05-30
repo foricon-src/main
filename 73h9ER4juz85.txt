@@ -333,7 +333,7 @@ f-icon[icon="house-door"]::before { content: '\e85c'; }
 f-icon[icon="house-door"][type="outlined"]::before { content: '\e85d'; }
 f-icon[icon="notdef"]::before { content: '\e800'; }
 f-icon[icon="pen"]::before { content: '\e865'; }
-f-icon[icon="pen"][type="outline"]::before { content: '\e866'; }
+f-icon[icon="pen"][type="outlined"]::before { content: '\e866'; }
 f-icon[icon="spinner-1p3"]::before { content: '\e834'; }
 f-icon[icon="spinner-3p4"]::before { content: '\e835'; }
 f-icon[icon="towers"][type="outlined"]::before { content: '\e836'; }
