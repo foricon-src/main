@@ -1,21 +1,13 @@
 import { dbFirestore } from "https://forio-source.github.io/foricon-firebase/script.js";
-import {
-  doc,
-  getDoc,
-} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 const gfi = document.getElementById("getForiconIcon");
 const u = gfi.getAttribute("src").split("#");
+function error(string) {console.error(string)}
 
-if (!gfi) {
-  console.error('Element with "getForiconIcon" id is undefined');
-}
-else if (gfi.nodeName != "SCRIPT") {
-  console.error('Element with "getForiconIcon" id is not <script>');
-}
-else if (u.length != 2) {
-  console.error("Invalid src's value");
-}
+if (!gfi) { error('Element with "getForiconIcon" id is undefined') }
+else if (gfi.nodeName != "SCRIPT") { error('Element with "getForiconIcon" id is not <script>') }
+else if (u.length != 2) { error("Invalid src's value") }
 else {
   gfi.remove();
   customElements.define("f-icon", class extends HTMLElement {
@@ -23,31 +15,19 @@ else {
       return this.getAttribute("icon");
     }
     setIcon(iconName) {
-      if (iconName) {
-        this.setAttribute("icon", iconName);
-      }
-      else {
-        console.error("Argument cannot be null or undefined");
-      }
+      if (iconName) { this.setAttribute("icon", iconName) }
+      else { error("Argument cannot be null or undefined") }
     }
     toggleIcon(icon1Name, icon2Name) {
-      if (arguments.length == 2) {
-        this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name);
-      }
-      else {
-        console.error("There are must be 2 arguments")
-      }
+      if (arguments.length == 2) { this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name) }
+      else { error("There are must be 2 arguments") }
     }
     getStyle() {
       let splited = this.getAttribute("type").split("/");
       return splited.length == 2 ? splited[1] : splited[0];
     }
     toggleStyle() {
-      let spl = this.getAttribute("type").split("/");
-      let tst = spl.length == 2 ?
-      `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled}`
-      :
-      `${spl[0] == "filled" ? "outlined" : "filled}`;
+      let spl = this.getAttribute("type").split("/"), tst = spl.length == 2 ? `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled"}` : `${spl[0] == "filled" ? "outlined" : "filled"}`;
       this.setAttribute("type", tst);
     }
     getType() {
@@ -56,32 +36,23 @@ else {
     }
     setType(typeName) {
       if (typeName) {
-        let spl = this.getAttribute("type").split("/");
-        let style = spl.length == 2 ? spl[1] : spl[0];
-        let tst = typeName == "" ? style : `${typeName}/${style}`;
+        let spl = this.getAttribute("type").split("/"), style = spl.length == 2 ? spl[1] : spl[0], tst = typeName == "" ? style : `${typeName}/${style}`;
         this.setAttribute("type", tst);
       }
-      else {
-        console.error("Argument cannot be null or undefined");
-      };
+      else { error("Argument cannot be null or undefined"); };
     }
     toggleType(type1Name, type2Name) {
       if (arguments.length == 2) {
-        let spl = this.getAttribute("type").split("/");
-        let tst = spl[0] == type1Name ? type2Name : type1Name;
-        if (tst != "") {
-          tst += "/";
-        };
+        let spl = this.getAttribute("type").split("/"), tst = spl[0] == type1Name ? type2Name : type1Name;
+        if (tst != "") { tst += "/" };
         this.setAttribute("type", `${tst}${spl[1]}`);
       }
-      else {
-        console.error("There are must be 2 arguments");
-      };
+      else { error("There are must be 2 arguments") };
     }
   });
   async function a() {
-    const docs = await getDoc(doc(dbFirestore, "users", u[1]));
-    if (docs.exists()) {
+    const d = await getDoc(doc(dbFirestore, "users", u[1]));
+    if (d.exists()) {
       const xhr = new XMLHttpRequest();
       xhr.open(
         "GET",
@@ -99,9 +70,7 @@ else {
         xhr.send();
       } while (xhr.readyState != 4 && xhr.status != 200);
     }
-    else {
-      console.error("Given account id is invalid")
-    }
+    else { console.error("Given account id is invalid") }
   }
   a();
-}
+};
