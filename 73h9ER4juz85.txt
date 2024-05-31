@@ -234,10 +234,30 @@ f-icon[rotate="flipY"] {
   100% {transform: rotateX(360deg) rotateY(360deg);}
 }
 
+f-icon[icon="arrow-down"][type="outlined"]::before { content: '\e867'; }
+f-icon[icon="arrow-up"][type="outlined"]::before { content: '\e868'; }
+f-icon[icon="arrow-left"][type="outlined"]::before { content: '\e869'; }
+f-icon[icon="arrow-right"][type="outlined"]::before { content: '\e86a'; }
+f-icon[icon="arrow-down-to-line"][type="outlined"]::before { content: '\e86b'; }
+f-icon[icon="arrow-up-from-line"][type="outlined"]::before { content: '\e86c'; }
+f-icon[icon="arrow-right-to-line"][type="outlined"]::before { content: '\e86d'; }
+f-icon[icon="arrow-right-from-line"][type="outlined"]::before { content: '\e86e'; }
+f-icon[icon="arrow-down-to-bracket"][type="outlined"]::before { content: '\e86f'; }
+f-icon[icon="arrow-up-from-bracket"][type="outlined"]::before { content: '\e870'; }
+f-icon[icon="arrow-right-to-bracket"][type="outlined"]::before { content: '\e871'; }
+f-icon[icon="arrow-right-from-bracket"][type="outlined"]::before { content: '\e872'; }
 f-icon[icon="bars"][type="outlined"]::before { content: '\e801'; }
 f-icon[icon="brush"]::before { content: '\e85e'; }
 f-icon[icon="brush"][type="outlined"]::before { content: '\e85f'; }
 f-icon[icon="circle-half"]::before { content: '\e860'; }
+f-icon[icon="chevron-down"][type="outlined"]::before { content: '\e873'; } /* '' */
+f-icon[icon="chevron-up"][type="outlined"]::before { content: '\e874'; } /* '' */
+f-icon[icon="chevron-left"][type="outlined"]::before { content: '\e875'; } /* '' */
+f-icon[icon="chevron-right"][type="outlined"]::before { content: '\e876'; } /* '' */
+f-icon[icon="chevron-down-small"][type="outlined"]::before { content: '\e877'; } /* '' */
+f-icon[icon="chevron-up-small"][type="outlined"]::before { content: '\e878'; } /* '' */
+f-icon[icon="chevron-left-small"][type="outlined"]::before { content: '\e879'; } /* '' */
+f-icon[icon="chevron-right-small"][type="outlined"]::before { content: '\e87a'; } /* '' */
 f-icon[icon="eraser"]::before { content: '\e861'; }
 f-icon[icon="file"]::before { content: '\e802'; }
 f-icon[icon="file"][type="outlined"]::before { content: '\e803'; }
@@ -325,7 +345,10 @@ f-icon[icon="grid-9"]::before { content: '\e863'; }
 f-icon[icon="grid-9"][type="outlined"]::before { content: '\e82f'; }
 f-icon[icon="layers"]::before { content: '\e833'; }
 f-icon[icon="layers"][type="outlined"]::before { content: '\e864'; }
-f-icon[icon="magnifying-glass"]::before { content: '\e830'; }
+f-icon[icon="magnifying-glass"]::before { content: '\e87b'; }
+f-icon[icon="magnifying-glass"][type="duotone/filled"]::before { content: '\e87c'; }
+f-icon[icon="magnifying-glass"][type="duotone/filled"]::after { content: '\e87d'; }
+f-icon[icon="magnifying-glass"][type="outlined"]::before { content: '\e830'; }
 f-icon[icon="house"]::before { content: '\e85b'; }
 f-icon[icon="house"][type="outlined"]::before { content: '\e831'; }
 f-icon[icon="house-2"][type="outlined"]::before { content: '\e832'; }
@@ -334,6 +357,6 @@ f-icon[icon="house-door"][type="outlined"]::before { content: '\e85d'; }
 f-icon[icon="notdef"]::before { content: '\e800'; }
 f-icon[icon="pen"]::before { content: '\e865'; }
 f-icon[icon="pen"][type="outlined"]::before { content: '\e866'; }
-f-icon[icon="spinner-1p3"]::before { content: '\e834'; }
-f-icon[icon="spinner-3p4"]::before { content: '\e835'; }
+f-icon[icon="spinner-1p3"][type="outlined"]::before { content: '\e834'; }
+f-icon[icon="spinner-3p4"][type="outlined"]::before { content: '\e835'; }
 f-icon[icon="towers"][type="outlined"]::before { content: '\e836'; }
