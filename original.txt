@@ -27,7 +27,9 @@ else {
       return splited.length == 2 ? splited[1] : splited[0];
     }
     toggleStyle() {
-      let spl = this.getAttribute("type").split("/"), tst = spl.length == 2 ? `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled"}` : `${spl[0] == "filled" ? "outlined" : "filled"}`;
+      let spl = this.getAttribute("type");
+      spl = spl ? ["filled"] : spl.split("/");
+      let tst = spl.length == 2 ? `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled"}` : `${spl[0] == "filled" ? "outlined" : "filled"}`;
       this.setAttribute("type", tst);
     }
     getType() {
@@ -35,8 +37,10 @@ else {
       return spl.length == 2 ? spl[0] : null;
     }
     setType(typeName) {
-      if (typeName) {
-        let spl = this.getAttribute("type").split("/"), style = spl.length == 2 ? spl[1] : spl[0], tst = typeName == "" ? style : `${typeName}/${style}`;
+      if (typeName || typeName == "") {
+        let spl = this.getAttribute("type");
+        spl = spl ? [""] : spl.split("/");
+        let style = spl.length == 2 ? spl[1] : spl[0] == "" ? "filled" : spl[0] , tst = typeName == "" ? style : `${typeName}/${style}`;
         this.setAttribute("type", tst);
       }
       else { error("Argument cannot be null or undefined"); };
