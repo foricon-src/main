@@ -28,7 +28,7 @@ else {
     }
     toggleStyle() {
       let spl = this.getAttribute("type");
-      spl = spl ? ["filled"] : spl.split("/");
+      spl = spl ? spl.split("/") : ["filled"];
       let tst = spl.length == 2 ? `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled"}` : `${spl[0] == "filled" ? "outlined" : "filled"}`;
       this.setAttribute("type", tst);
     }
@@ -39,7 +39,7 @@ else {
     setType(typeName) {
       if (typeName || typeName == "") {
         let spl = this.getAttribute("type");
-        spl = spl ? [""] : spl.split("/");
+        spl = spl ? spl.split("/") : [""];
         let style = spl.length == 2 ? spl[1] : spl[0] == "" ? "filled" : spl[0] , tst = typeName == "" ? style : `${typeName}/${style}`;
         this.setAttribute("type", tst);
       }
