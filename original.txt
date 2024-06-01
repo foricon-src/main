@@ -33,7 +33,8 @@ else {
       this.setAttribute("type", tst);
     }
     getType() {
-      let spl = this.getAttribute("type").split("/");
+      let spl = this.getAttribute("type");
+      spl = spl ? spl.split("/") : [""];
       return spl.length == 2 ? spl[0] : "regular";
     }
     setType(typeName) {
