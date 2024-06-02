@@ -53,7 +53,7 @@ else {
         spl = spl.length == 2 ? spl : ["", ...spl] ;
         let tst = spl[0] == type1Name ? type2Name : type1Name;
         if (tst != "") { tst += "/" };
-        this.setAttribute("type", `${tst}${spl[1] ? "filled" : spl[1]}`);
+        this.setAttribute("type", `${tst}${spl[1] == "" ? "filled" : spl[1]}`);
       }
       else { error("There are must be 2 arguments") };
     }
