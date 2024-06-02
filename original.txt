@@ -48,14 +48,17 @@ else {
     }
     toggleType(type1Name, type2Name) {
       if (arguments.length == 2) {
-        let spl = this.getAttribute("type").split("/"), tst = spl[0] == type1Name ? type2Name : type1Name;
+        let spl = this.getAttribute("type");
+        spl = spl ? spl.split("/") : ["", ""];
+        spl = spl.length == 2 ? spl : ["", ...spl] ;
+        let tst = spl[0] == type1Name ? type2Name : type1Name;
         if (tst != "") { tst += "/" };
         this.setAttribute("type", `${tst}${spl[1]}`);
       }
       else { error("There are must be 2 arguments") };
     }
   });
-  async function a() {
+  (async function () {
     const d = await getDoc(doc(dbFirestore, "users", u[1]));
     if (d.exists()) {
       const xhr = new XMLHttpRequest();
@@ -76,6 +79,5 @@ else {
       } while (xhr.readyState != 4 && xhr.status != 200);
     }
     else { console.error("Given account id is invalid") }
-  }
-  a();
+  })();
 };
