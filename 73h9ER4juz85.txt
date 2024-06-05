@@ -360,12 +360,12 @@ f-icon[icon="pen"][type="outlined"]::before { content: '\e866'; }
 f-icon[icon="spinner-1p3"][type="outlined"]::before { content: '\e834'; }
 f-icon[icon="spinner-3p4"][type="outlined"]::before { content: '\e835'; }
 f-icon[icon="towers"][type="outlined"]::before { content: '\e836'; }
-f-icon[icon="wifi"]::before, f-icon[icon="wifi-slash"][type="duotone/filled"]::after { content: '\e87e'; }
-f-icon[icon="wifi-good"]::before, f-icon[icon="wifi-good"][type="duotone/filled"]::before { content: '\e87f'; }
-f-icon[icon="wifi-average"]::before, f-icon[icon="wifi-average"][type="duotone/filled"]::before { content: '\e880'; }
-f-icon[icon="wifi-weak"]::before, f-icon[icon="wifi-weak"][type="duotone/filled"]::before { content: '\e881'; }
-f-icon[icon="wifi-good"][type="duotone/filled"]::after { content: '\e882'; }
-f-icon[icon="wifi-average"][type="duotone/filled"]::after { content: '\e883'; }
-f-icon[icon="wifi-weak"][type="duotone/filled"]::after { content: '\e884'; }
-f-icon[icon="wifi-slash"]::before { content: '\e885'; }
-f-icon[icon="wifi-slash"][type="duotone/filled"]::before { content: '\e886'; }
+f-icon[icon="wifi"][type="outlined"]::before, f-icon[icon="wifi-slash"][type="duotone/outlined"]::after { content: '\e87e'; }
+f-icon[icon="wifi-good"][type="outlined"]::before, f-icon[icon="wifi-good"][type="duotone/outlined"]::before { content: '\e87f'; }
+f-icon[icon="wifi-average"][type="outlined"]::before, f-icon[icon="wifi-average"][type="duotone/outlined"]::before { content: '\e880'; }
+f-icon[icon="wifi-weak"][type="outlined"]::before, f-icon[icon="wifi-weak"][type="duotone/outlined"]::before { content: '\e881'; }
+f-icon[icon="wifi-good"][type="duotone/outlined"]::after { content: '\e882'; }
+f-icon[icon="wifi-average"][type="duotone/outlined"]::after { content: '\e883'; }
+f-icon[icon="wifi-weak"][type="duotone/outlined"]::after { content: '\e884'; }
+f-icon[icon="wifi-slash"][type="outlined"]::before { content: '\e885'; }
+f-icon[icon="wifi-slash"][type="duotone/outlined"]::before { content: '\e886'; }
