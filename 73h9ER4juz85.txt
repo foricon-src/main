@@ -247,6 +247,8 @@ f-icon[icon="arrow-up-from-bracket"][type="outlined"]::before { content: '\e870'
 f-icon[icon="arrow-right-to-bracket"][type="outlined"]::before { content: '\e871'; }
 f-icon[icon="arrow-right-from-bracket"][type="outlined"]::before { content: '\e872'; }
 f-icon[icon="bars"][type="outlined"]::before { content: '\e801'; }
+f-icon[icon="bars"][type="duotone/outlined"]::before { content: '\e887'; }
+f-icon[icon="bars"][type="duotone/outlined"]::after { content: '\e888'; }
 f-icon[icon="brush"]::before { content: '\e85e'; }
 f-icon[icon="brush"][type="outlined"]::before { content: '\e85f'; }
 f-icon[icon="circle-half"]::before { content: '\e860'; }
