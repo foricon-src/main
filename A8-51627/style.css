@@ -379,7 +379,7 @@ f-icon[icon="house-blank"][type="outlined"]::before { content: '\e87f'; }
 f-icon[icon="house-blank-2"][type="outlined"]::before { content: '\e87e'; }
 f-icon[icon="notdef"]::before { content: '\e88d'; }
 f-icon[icon="pencil"]::before { content: '\e88e'; }
-f-icon[icon="pencil"][type="outlined"]::before { content: '\e866'; }
+f-icon[icon="pencil"][type="outlined"]::before { content: '\e893'; }
 f-icon[icon="pencil"][type="duotone/filled"]::before { content: '\e891'; }
 f-icon[icon="pencil"][type="duotone/filled"]::after { content: '\e892'; }
 f-icon[icon="pencil"][type="duotone/outlined"]::before { content: '\e88f'; }
