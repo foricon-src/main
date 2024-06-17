@@ -391,7 +391,7 @@ f-icon[icon="wifi-average"][type="outlined"]::before, f-icon[icon="wifi-average"
 f-icon[icon="wifi-weak"][type="outlined"]::before, f-icon[icon="wifi-weak"][type="duotone/outlined"]::before { content: '\e89d'; }
 f-icon[icon="wifi-bad"][type="outlined"]::before, f-icon[icon="wifi-bad"][type="duotone/outlined"]::before { content: '\e899'; }
 f-icon[icon="wifi-average"][type="duotone/outlined"]::after { content: '\e898'; }
-f-icon[icon="wifi-weak"][type="duotone/outlined"]::after { content: '\e89d'; }
+f-icon[icon="wifi-weak"][type="duotone/outlined"]::after { content: '\e89e'; }
 f-icon[icon="wifi-bad"][type="duotone/outlined"]::after { content: '\e89a'; }
 f-icon[icon="wifi-slash"][type="outlined"]::before { content: '\e89b'; }
 f-icon[icon="wifi-slash"][type="duotone/outlined"]::before { content: '\e89c'; }
