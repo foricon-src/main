@@ -1,4 +1,4 @@
-import { dbFirestore } from "https://forio-source.github.io/foricon-firebase/script.js";
+import { dbFirestore } from "https://foricon-src.github.io/foricon-firebase/script.js";
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const gfi = document.getElementById("getForiconIcon");
@@ -64,7 +64,7 @@ else {
       const xhr = new XMLHttpRequest();
       xhr.open(
         "GET",
-        "https://forio-source.github.io/nju199AHr81/73h9ER4juz85.txt",
+        "https://foricon-src.github.io/main/style.css",
         !0
       );
       xhr.onreadystatechange = () => {
