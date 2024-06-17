@@ -267,7 +267,7 @@ f-icon[icon="chevron-left-small"][type="outlined"]::before { content: '\e818'; }
 f-icon[icon="chevron-right-small"][type="outlined"]::before { content: '\e81a'; }
 f-icon[icon="eraser"]::before { content: '\e81d'; }
 f-icon[icon="eraser"][type="duotone/filled"]::before { content: '\e81e'; }
-f-icon[icon="eraser"][type="duotone/filled"]::before { content: '\e81f'; }
+f-icon[icon="eraser"][type="duotone/filled"]::after { content: '\e81f'; }
 f-icon[icon="file"]::before { content: '\e820'; }
 f-icon[icon="file"][type="outlined"]::before { content: '\e847'; }
 f-icon[icon="file"][type="duotone/filled"]::before { content: '\e829'; }
