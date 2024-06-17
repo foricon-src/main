@@ -370,7 +370,7 @@ f-icon[icon="magnifying-glass"]::before { content: '\e887'; }
 f-icon[icon="magnifying-glass"][type="outlined"]::before { content: '\e88c'; }
 f-icon[icon="magnifying-glass"]:is([type="duotone/filled"], [type="duotone/outlined"])::before { content: '\e88a'; }
 f-icon[icon="magnifying-glass"][type="duotone/filled"]::after { content: '\e88b'; }
-f-icon[icon="magnifying-glass"][type="duotone/outlined"]::before { content: '\e888'; }
+f-icon[icon="magnifying-glass"][type="duotone/outlined"]::after { content: '\e889'; }
 f-icon[icon="house"]::before { content: '\e87c'; }
 f-icon[icon="house"][type="outlined"]::before { content: '\e880'; }
 f-icon[icon="house-blank"]::before { content: '\e87d'; }
