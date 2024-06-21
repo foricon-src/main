@@ -78,8 +78,9 @@ else {
         do {
           xhr.send();
         } while (xhr.readyState != 4 || xhr.status != 200);
-      };
+      }
+      else { error("This site cannot access to Foricon assets because the user didn't allowed this domain") };
     }
-    else { console.error("Given account id is invalid") }
+    else { error("Given account id is invalid") }
   })();
 };
