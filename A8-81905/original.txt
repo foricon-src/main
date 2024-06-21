@@ -24,7 +24,7 @@ else {
   (async function () {
     let d = await getDoc(doc(dbFirestore, "users", u[1]));
     if (d.exists()) {
-      d = d.val();
+      d = d.data();
       if (d.settings.limitDomains.some(domain => location.hostname == domain)) {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", "https://foricon-src.github.io/main/style.css", !0);
