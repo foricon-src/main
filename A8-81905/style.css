@@ -245,9 +245,9 @@ f-icon[icon="brush"][type="outlined"]::before { content: '\e811'; }
 f-icon[icon="brush"]:is([type="duotone/filled"], [type="duotone/outlined"])::before { content: '\e80f'; }
 f-icon[icon="brush"][type="duotone/filled"]::after { content: '\e810'; }
 f-icon[icon="brush"][type="duotone/outlined"]::after { content: '\e80e'; }
-f-icon[icon="circle-half"]::before { content: '\e812'; }
-f-icon[icon="circle-half"][type="duotone/filled"]::before { content: '\e813'; }
-f-icon[icon="circle-half"][type="duotone/filled"]::after { content: '\e814'; }
+f-icon[icon="circle-half-stroke"]::before { content: '\e812'; }
+f-icon[icon="circle-half-stroke"][type="duotone/filled"]::before { content: '\e813'; }
+f-icon[icon="circle-half-stroke"][type="duotone/filled"]::after { content: '\e814'; }
 f-icon[icon="chevron-down"][type="outlined"]::before { content: '\e815'; }
 f-icon[icon="chevron-up"][type="outlined"]::before { content: '\e81b'; }
 f-icon[icon="chevron-left"][type="outlined"]::before { content: '\e817'; }
