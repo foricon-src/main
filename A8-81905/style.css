@@ -14,20 +14,12 @@
 f-icon {
   animation: 1s ease infinite;
   position: relative;
+  justify-content: center;
   display: inline-flex;
 }
 f-icon::before, f-icon::after {
   font-family: "Foricon Alpha 8";
-  font-style: normal;
-  font-weight: normal;
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
   line-height: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 f-icon::before {
   color: var(--primary-color);
@@ -41,7 +33,6 @@ f-icon[type^="duotone/"]::after, f-icon[reverse][type^="duotone/"]::before {
 }
 f-icon[type^="duotone/"]::after {
   position: absolute;
-  left: 0
 }
 
 f-icon[animation*="-xxslow"] {
