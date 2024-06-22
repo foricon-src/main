@@ -27,7 +27,7 @@ else {
       d = d.data();
       if (d.settings.allowedDomains.some(domain => location.hostname == domain)) {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://foricon-src.github.io/main/style.css", !0);
+        xhr.open("GET", "https://foricon-src.github.io/main/A8-81905/style.css", !0);
         xhr.onreadystatechange = () => {
           if (xhr.readyState == 4 && xhr.status == 200) {
             let s = document.createElement("style");
