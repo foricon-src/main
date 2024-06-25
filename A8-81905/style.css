@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Foricon Alpha 8";
-  src: url("//foricon-src.github.io/main/A8-81905/alpha8.ttf");
+  src: url("//foricon-src.github.io/main/A8-81905/font.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -376,6 +376,7 @@ f-icon[icon="pencil"][type="duotone/outlined"]::before { content: '\e88f'; }
 f-icon[icon="pencil"][type="duotone/outlined"]::after { content: '\e890'; }
 f-icon[icon="spinner-1p3"][type="outlined"]::before { content: '\e894'; }
 f-icon[icon="spinner-3p4"][type="outlined"]::before { content: '\e895'; }
+f-icon[icon="vietnam"]::before { content: '\e888'; }
 f-icon[icon="wifi"][type="outlined"]::before, f-icon[icon="wifi-slash"][type="duotone/outlined"]::after { content: '\e896'; }
 f-icon[icon="wifi-average"][type="outlined"]::before, f-icon[icon="wifi-average"][type="duotone/outlined"]::before { content: '\e897'; }
 f-icon[icon="wifi-weak"][type="outlined"]::before, f-icon[icon="wifi-weak"][type="duotone/outlined"]::before { content: '\e89d'; }
