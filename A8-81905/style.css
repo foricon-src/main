@@ -259,6 +259,18 @@ f-icon[icon="chevron-right-small"][type="outlined"]::before { content: '\e81a'; 
 f-icon[icon="eraser"]::before { content: '\e81d'; }
 f-icon[icon="eraser"][type="duotone/filled"]::before { content: '\e81e'; }
 f-icon[icon="eraser"][type="duotone/filled"]::after { content: '\e81f'; }
+f-icon[icon="face-angry"]::before { content: '\e8a1'; } /* '' */
+f-icon[icon="face-diagonal-mouth"]::before { content: '\e8a2'; }
+f-icon[icon="face-expressionless"]::before { content: '\e8a3'; }
+f-icon[icon="face-flushed"]::before { content: '\e8a4'; }
+f-icon[icon="face-laugh"]::before { content: '\e8a5'; }
+f-icon[icon="face-laugh-squint"]::before { content: '\e8a6'; }
+f-icon[icon="face-laugh-smiling-eyes"]::before { content: '\e8a7'; }
+f-icon[icon="face-neutral"]::before { content: '\e8a8'; }
+f-icon[icon="face-rolling-eyes"]::before { content: '\e8a9'; }
+f-icon[icon="face-frown"]::before { content: '\e8aa'; }
+f-icon[icon="face-smile"]::before { content: '\e8ab'; }
+f-icon[icon="face-without-mouth"]::before { content: '\e8ac'; }
 f-icon[icon="file"]::before { content: '\e820'; }
 f-icon[icon="file"][type="outlined"]::before { content: '\e847'; }
 f-icon[icon="file"][type="duotone/filled"]::before { content: '\e829'; }
