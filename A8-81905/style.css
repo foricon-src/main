@@ -259,7 +259,7 @@ f-icon[icon="chevron-right-small"][type="outlined"]::before { content: '\e81a'; 
 f-icon[icon="eraser"]::before { content: '\e81d'; }
 f-icon[icon="eraser"][type="duotone/filled"]::before { content: '\e81e'; }
 f-icon[icon="eraser"][type="duotone/filled"]::after { content: '\e81f'; }
-f-icon[icon="face-angry"]::before { content: '\e8a1'; } /* '' */
+f-icon[icon="face-angry"]::before { content: '\e8a1'; }
 f-icon[icon="face-diagonal-mouth"]::before { content: '\e8a2'; }
 f-icon[icon="face-expressionless"]::before { content: '\e8a3'; }
 f-icon[icon="face-flushed"]::before { content: '\e8a4'; }
