@@ -100,7 +100,7 @@ if (!gfi) {
         const xhr = new XMLHttpRequest();
         xhr.open(
           "GET",
-          "https://foricon-src.github.io/main/A8-81905/style.css",
+          "https://foricon-src.github.io/main/0.8.2/style.css",
           !0
         );
         xhr.onreadystatechange = () => {
