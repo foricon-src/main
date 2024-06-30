@@ -21,6 +21,7 @@ if (!gfi) {
   (async function () {
     let d = await getDoc(doc(dbFirestore, "users", u[1]));
     if (d.exists()) {
+      const xhr = new XMLHttpRequest();
       xhr.open(
         "GET",
         "https://foricon-src.github.io/main/components/0.8.2/style.css",
