@@ -31,6 +31,7 @@ if (!gfi) {
         if (xhr.readyState == 4 && xhr.status == 200) {
           let s = document.createElement("style");
           s.innerHTML = xhr.responseText;
+          console.log("Ok")
           document.querySelector("head").appendChild(s);
         }
       };
