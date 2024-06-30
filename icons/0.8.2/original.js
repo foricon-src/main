@@ -89,9 +89,8 @@ else {
             document.querySelector("head").appendChild(s);
           }
         };
-        do {
-          xhr.send();
-        } while (xhr.readyState != 4 && xhr.status != 200);
+        do xhr.send();
+        while (xhr.readyState != 4 && xhr.status != 200);
       }
       else error("This site cannot access to Foricon assets because the user has't allowed this domain yet");
     } 
