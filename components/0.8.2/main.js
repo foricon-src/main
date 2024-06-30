@@ -24,7 +24,7 @@ if (!gfi) {
       const xhr = new XMLHttpRequest();
       xhr.open(
         "GET",
-        "https://foricon-src.github.io/main/components/0.8.2/style.css",
+        "https://foricon-src.github.io/main/components/0.8.2/all.css",
         !0
       );
       xhr.onreadystatechange = () => {
