@@ -10,13 +10,10 @@ function error(string) {
   console.error(string);
 }
 
-if (!gfi) {
-  error('Element with "getForiconIcon" id is undefined');
-} else if (gfi.nodeName != "SCRIPT") {
-  error('Element with "getForiconIcon" id is not <script>');
-} else if (u.length != 2) {
-  error("Invalid src's value");
-} else {
+if (!gfi) error('Element with "getForiconIcon" id is undefined');
+else if (gfi.nodeName != "SCRIPT") error('Element with "getForiconIcon" id is not <script>');
+else if (u.length != 2) error("Invalid src's value");
+else {
   gfi.remove();
   (async function () {
     customElements.define(
@@ -26,20 +23,14 @@ if (!gfi) {
           return this.getAttribute("icon");
         }
         setIcon(iconName) {
-          if (iconName) {
-            this.setAttribute("icon", iconName);
-          } else {
-            error("Argument cannot be null or undefined");
-          }
+          if (iconName) this.setAttribute("icon", iconName);
+          else error("Argument cannot be null or undefined");
         }
         toggleIcon(icon1Name, icon2Name) {
           if (arguments.length == 2) {
-            this.getAttribute("icon") == icon1Name
-              ? this.setAttribute("icon", icon2Name)
-              : this.setAttribute("icon", icon1Name);
-          } else {
-            error("There are must be 2 arguments");
+            this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name);
           }
+          else error("There are must be 2 arguments");
         }
         getStyle() {
           let splited = this.getAttribute("type").split("/");
@@ -48,10 +39,7 @@ if (!gfi) {
         toggleStyle() {
           let spl = this.getAttribute("type");
           spl = spl ? spl.split("/") : ["filled"];
-          let tst =
-            spl.length == 2
-              ? `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled"}`
-              : `${spl[0] == "filled" ? "outlined" : "filled"}`;
+          let tst = spl.length == 2 ? `${spl[0]}/${spl[1] == "filled" ? "outlined" : "filled"}` : `${spl[0] == "filled" ? "outlined" : "filled"}`;
           this.setAttribute("type", tst);
         }
         getType() {
@@ -63,13 +51,11 @@ if (!gfi) {
           if (typeName || typeName == "") {
             let spl = this.getAttribute("type");
             spl = spl ? spl.split("/") : [""];
-            let style =
-                spl.length == 2 ? spl[1] : spl[0] == "" ? "filled" : spl[0],
-              tst = typeName == "" ? style : `${typeName}/${style}`;
+            let style = spl.length == 2 ? spl[1] : spl[0] == "" ? "filled" : spl[0];
+            let tst = typeName == "" ? style : `${typeName}/${style}`;
             this.setAttribute("type", tst);
-          } else {
-            error("Argument cannot be null or undefined");
           }
+          else error("Argument cannot be null or undefined");
         }
         toggleType(type1Name, type2Name) {
           if (arguments.length == 2) {
@@ -77,16 +63,10 @@ if (!gfi) {
             spl = spl ? spl.split("/") : [""];
             spl = spl.length == 2 ? spl : ["", ...spl];
             let tst = spl[0] == type1Name ? type2Name : type1Name;
-            if (tst != "") {
-              tst += "/";
-            }
-            this.setAttribute(
-              "type",
-              `${tst}${spl[1] == "" ? "filled" : spl[1]}`
-            );
-          } else {
-            error("There are must be 2 arguments");
+            if (tst != "") tst += "/";
+            this.setAttribute("type", `${tst}${spl[1] == "" ? "filled" : spl[1]}`);
           }
+          else error("There are must be 2 arguments");
         }
       }
     );
@@ -94,9 +74,7 @@ if (!gfi) {
     let d = await getDoc(doc(dbFirestore, "users", u[1]));
     if (d.exists()) {
       d = d.data();
-      if (
-        d.settings.allowedDomains.some((domain) => location.hostname == domain)
-      ) {
+      if (d.settings.allowedDomains.some((domain) => location.hostname == domain)) {
         const xhr = new XMLHttpRequest();
         xhr.open(
           "GET",
@@ -113,13 +91,9 @@ if (!gfi) {
         do {
           xhr.send();
         } while (xhr.readyState != 4 && xhr.status != 200);
-      } else {
-        error(
-          "This site cannot access to Foricon assets because the user didn't allowed this domain"
-        );
       }
-    } else {
-      error("Given account id is invalid");
-    }
+      else error("This site cannot access to Foricon assets because the user has't allowed this domain yet");
+    } 
+    else error("Given account id is invalid");
   })();
-}
+};
