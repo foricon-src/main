@@ -20,6 +20,7 @@ if (!gfi) {
   gfi.remove();
   (async function () {
     let d = await getDoc(doc(dbFirestore, "users", u[1]));
+    console.log("Ok")
     if (d.exists()) {
       const xhr = new XMLHttpRequest();
       xhr.open(
@@ -27,6 +28,7 @@ if (!gfi) {
         "https://foricon-src.github.io/main/components/0.8.2/all.css",
         !0
       );
+      console.log("Ok")
       xhr.onreadystatechange = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
           let s = document.createElement("style");
