@@ -10,3 +10,18 @@
 .ring-white {
     box-shadow: 0 0 0 3px var(--bg-color);
 }
+.bdr-rad-3 {
+    border-radius: 3px;
+}
+.bdr-rad-5 {
+    border-radius: 5px;
+}
+.bdr-rad-10 {
+    border-radius: 10px;
+}
+.bdr-rad-15 {
+    border-radius: 15px;
+}
+.bdr-rad-20 {
+    border-radius: 20px;
+}
