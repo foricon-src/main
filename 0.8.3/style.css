@@ -354,6 +354,7 @@ f-icon[icon="folder-video"][type="outlined"]::before { content: '\e86f'; }
 f-icon[icon="globe"]::before, f-icon[icon="globe"][type="duotone/filled"]::after { content: '\e8ad'; }
 f-icon[icon="globe"][type="outlined"]::before { content: '\e8ae'; }
 f-icon[icon="globe"][type="duotone/filled"]::before { content: '\e8af'; }
+f-icon[icon="grid-4"]::before { content: '\e870'; }
 f-icon[icon="grid-4"][type="outlined"]::before { content: '\e875'; }
 f-icon[icon="grid-4"][type="duotone/filled"]::before { content: '\e873'; }
 f-icon[icon="grid-4"][type="duotone/filled"]::after { content: '\e874'; }
