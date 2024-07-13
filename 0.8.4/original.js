@@ -79,7 +79,7 @@ else {
         const xhr = new XMLHttpRequest();
         xhr.open(
           "GET",
-          "https://foricon-src.github.io/main/0.8.3/style.css",
+          "//foricon-src.github.io/main/0.8.4/style.css",
           !0
         );
         xhr.onreadystatechange = () => {

@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Foricon Alpha 8";
-  src: url("//foricon-src.github.io/main/0.8.3/font.ttf");
+  src: url("//foricon-src.github.io/main/0.8.4/font.ttf");
   font-weight: normal;
   font-icon-style: normal;
 }
@@ -241,7 +241,7 @@ f-icon[icon="bars"][icon-style="outline"]::before { content: '\e80c'; }
 f-icon[icon="bars"][icon-style="duotone/outline"]::before { content: '\e8a0'; }
 f-icon[icon="bars"][icon-style="duotone/outline"]::after { content: '\e89f'; }
 f-icon[icon="brush"]::before { content: '\e80d'; }
-f-icon[icon="brush"][icon-style="outline"]::before { content: '\e811'; }
+f-icon[icon="brush"][icon-style="outline"]::before { content: '\e8b0'; }
 f-icon[icon="brush"]:is([icon-style="duotone/solid"], [icon-style="duotone/outline"])::before { content: '\e80f'; }
 f-icon[icon="brush"][icon-style="duotone/solid"]::after { content: '\e810'; }
 f-icon[icon="brush"][icon-style="duotone/outline"]::after { content: '\e80e'; }
