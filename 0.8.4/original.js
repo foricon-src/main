@@ -1,8 +1,5 @@
 import { dbFirestore } from "https://foricon-src.github.io/foricon-firebase/script.js";
-import {
-  doc,
-  getDoc,
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const gfi = document.getElementById("getForiconIcon");
 const u = gfi.getAttribute("src").split("#");
@@ -15,11 +12,50 @@ else if (gfi.nodeName != "SCRIPT") error('Element with "getForiconIcon" id is no
 else if (u.length != 2) error("Invalid src's value");
 else {
   gfi.remove();
-  (async function () {
-
+  (async () => {
     let d = await getDoc(doc(dbFirestore, "users", u[1]));
     if (d.exists()) {
       d = d.data();
+      let date = new Date();
+      let plans = {
+        lite: 5000,
+        plusBasic: 10000,
+        plus: 100000,
+      };
+      let crnt = {
+        month: date.getMonth() + 1,
+        year: date.getFullYear(),
+      };
+      if (!d.plan) {
+        d.plan = "lite";
+      };
+      if (!d.pageviewStart) {
+        d.pageviewStart = crnt;
+      };
+      if (!d.pageviewCount) {
+        d.pageviewCount = 1;
+      };
+      if (crnt.month > d.pageviewStart.month || crnt.year > d.pageviewStart.year) {
+        d.pageviewStart = crnt;
+        d.pageviewCount = 0;
+      }
+      else {
+        d.pageviewCount++;
+      };
+      console.log(d.pageviewCount);
+      console.log(plan[d.plan])
+
+      try {
+        await setDoc(doc(dbFirestore, 'users', u[1]), {
+          pageviewCount: d.pageviewCount,
+          pageviewStart: d.pageviewStart,
+          plain: d.plan,
+        }, {merge: true});
+      }
+      catch (error) {
+        error(error);
+      };
+
       if (d.settings.allowedDomains.some((domain) => location.hostname == domain)) {
         customElements.define(
           "f-icon",
