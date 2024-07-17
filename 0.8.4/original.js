@@ -43,7 +43,7 @@ else {
         d.pageviewCount++;
       };
       console.log(d.pageviewCount);
-      console.log(plan[d.plan])
+      console.log(plans[d.plan])
 
       try {
         await setDoc(doc(dbFirestore, 'users', u[1]), {
