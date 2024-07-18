@@ -248,6 +248,11 @@ f-icon[icon="brush"][icon-style="duotone/outline"]::after { content: '\e80e'; }
 f-icon[icon="circle-half-stroke"]::before { content: '\e812'; }
 f-icon[icon="circle-half-stroke"][icon-style="duotone/solid"]::before { content: '\e813'; }
 f-icon[icon="circle-half-stroke"][icon-style="duotone/solid"]::after { content: '\e814'; }
+f-icon[icon="circle-plus"]::before, f-icon[icon="circle-plus"][icon-style="duotone/solid"]:after { content: '\e811'; }
+f-icon[icon="circle-plus"][icon-style="outline"]::before { content: '\e8b1'; }
+f-icon[icon="circle-plus"][icon-style="duotone/solid"]::before { content: '\e8b3'; }
+f-icon[icon="circle-plus"][icon-style="duotone/outline"]::before { content: '\e8b4'; }
+f-icon[icon="circle-plus"][icon-style="duotone/outline"]::after { content: '\e8b5'; }
 f-icon[icon="chevron-down"][icon-style="outline"]::before { content: '\e815'; }
 f-icon[icon="chevron-up"][icon-style="outline"]::before { content: '\e81b'; }
 f-icon[icon="chevron-left"][icon-style="outline"]::before { content: '\e817'; }
@@ -388,6 +393,11 @@ f-icon[icon="house-blank"]::before { content: '\e87d'; }
 f-icon[icon="house-blank"][icon-style="outline"]::before { content: '\e87f'; }
 f-icon[icon="house-blank-2"][icon-style="outline"]::before { content: '\e87e'; }
 f-icon[icon="notdef"]::before { content: '\e88d'; }
+f-icon[icon="palette"]::before, f-icon[icon="palette"][icon-style="duotone/solid"]::after { content: '\e8b6'; }
+f-icon[icon="palette"][icon-style="outline"]::before { content: '\e8b7'; }
+f-icon[icon="palette"][icon-style="duotone/solid"]::before { content: '\e8b8'; }
+f-icon[icon="palette"][icon-style="duotone/outline"]::before { content: '\e8b9'; }
+f-icon[icon="palette"][icon-style="duotone/outline"]::after { content: '\e8ba'; }
 f-icon[icon="pencil"]::before { content: '\e88e'; }
 f-icon[icon="pencil"][icon-style="outline"]::before { content: '\e893'; }
 f-icon[icon="pencil"][icon-style="duotone/solid"]::before { content: '\e891'; }
@@ -397,6 +407,7 @@ f-icon[icon="pencil"][icon-style="duotone/outline"]::after { content: '\e890'; }
 f-icon[icon="phone"]::before, f-icon[icon="phone"][icon-style="duotone/solid"]:after { content: '\e8c0'; }
 f-icon[icon="phone"][icon-style="outline"]::before, f-icon[icon="phone"][icon-style="duotone/outline"]:after { content: '\e8c1'; }
 f-icon[icon="phone"]:is([icon-style="duotone/solid"], [icon-style="duotone/outline"])::before { content: '\e8c2'; }
+f-icon[icon="plus"][icon-style="outline"]::after { content: '\e8b2'; }
 f-icon[icon="spinner-1p3"][icon-style="outline"]::before { content: '\e894'; }
 f-icon[icon="spinner-3p4"][icon-style="outline"]::before { content: '\e895'; }
 f-icon[icon="vietnam"]::before { content: '\e888'; }
