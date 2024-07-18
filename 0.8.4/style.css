@@ -256,6 +256,11 @@ f-icon[icon="chevron-down-small"][icon-style="outline"]::before { content: '\e81
 f-icon[icon="chevron-up-small"][icon-style="outline"]::before { content: '\e81c'; }
 f-icon[icon="chevron-left-small"][icon-style="outline"]::before { content: '\e818'; }
 f-icon[icon="chevron-right-small"][icon-style="outline"]::before { content: '\e81a'; }
+f-icon[icon="display"]::before { content: '\e8bb'; }
+f-icon[icon="display"][icon-style="outline"]::before { content: '\e8bc'; }
+f-icon[icon="display"]:is([icon-style="duotone/solid"], [icon-style="duotone/outline"])::before { content: '\e8bd'; }
+f-icon[icon="display"][icon-style="duotone/solid"]::after { content: '\e8bd'; }
+f-icon[icon="display"][icon-style="duotone/outline"]::after { content: '\e8bf'; }
 f-icon[icon="eraser"]::before { content: '\e81d'; }
 f-icon[icon="eraser"][icon-style="duotone/solid"]::before { content: '\e81e'; }
 f-icon[icon="eraser"][icon-style="duotone/solid"]::after { content: '\e81f'; }
@@ -389,6 +394,9 @@ f-icon[icon="pencil"][icon-style="duotone/solid"]::before { content: '\e891'; }
 f-icon[icon="pencil"][icon-style="duotone/solid"]::after { content: '\e892'; }
 f-icon[icon="pencil"][icon-style="duotone/outline"]::before { content: '\e88f'; }
 f-icon[icon="pencil"][icon-style="duotone/outline"]::after { content: '\e890'; }
+f-icon[icon="phone"]::before, f-icon[icon="phone"][icon-style="duotone/solid"]:after { content: '\e8c0'; }
+f-icon[icon="phone"][icon-style="outline"]::before, f-icon[icon="phone"][icon-style="duotone/outline"]:after { content: '\e8c1'; }
+f-icon[icon="phone"]:is([icon-style="duotone/outline"], [icon-style="duotone/outline"])::before { content: '\e8c2'; }
 f-icon[icon="spinner-1p3"][icon-style="outline"]::before { content: '\e894'; }
 f-icon[icon="spinner-3p4"][icon-style="outline"]::before { content: '\e895'; }
 f-icon[icon="vietnam"]::before { content: '\e888'; }
