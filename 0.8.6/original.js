@@ -1,5 +1,5 @@
 import { dbFirestore } from "https://foricon-src.github.io/foricon-firebase/script.js";
-import { onValue } from '//www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+import { ref, onValue } from '//www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
 import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const gfi = document.getElementById("getForiconIcon");
