@@ -19,8 +19,8 @@ else {
       let date = new Date();
       let plans = {
         lite: 6000,
-        plusBasic: 20000,
-        plus: 1000000,
+        plus: 20000,
+        plusBusiness: 1000000,
       };
       let crnt = {
         month: date.getMonth() + 1,
