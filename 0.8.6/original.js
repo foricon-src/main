@@ -323,7 +323,7 @@ f-icon[rotate="flipY"] {
                   string = `\nf-icon[icon"${key}"][icon-style="${item}"]::before { content: "\\${unicode_layers?.[0]}"}
                   f-icon[icon"${key}"][icon-style="${item}"]::after { content: "\\${unicode_layers?.[1]}"}`;
                 }
-                else string = `\nf-icon[icon="${key}"][icon-style="${item}"]::before { content: "\\${unicode}"}`;
+                else string = `\nf-icon[icon="${key}"]${item == outline ? '[icon-style="outline"]' : ""}::before { content: "\\${unicode}"}`;
                 s.innerHTML += string;
               });
             };
