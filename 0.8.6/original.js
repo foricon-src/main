@@ -320,6 +320,7 @@ f-icon[rotate="flipY"] {
                 let unicode = each.unicodes?.[item];
                 if (item.includes("duotone/")) {
                   let unicode_layers = unicode?.split("|");
+                  console.log(unicode_layers)
                   string = `\nf-icon[icon"${key}"][icon-style="${item}"]::before { content: "\\${unicode_layers?.[0]}"}
                   f-icon[icon"${key}"][icon-style="${item}"]::after { content: "\\${unicode_layers?.[1]}"}`;
                 }
