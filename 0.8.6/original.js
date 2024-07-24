@@ -320,7 +320,7 @@ f-icon[rotate="flipY"] {
                 let unicode = each.unicodes?.[item.replace("/", "-")];
                 if (item.includes("duotone/")) {
                   let unicode_layers = unicode?.split("|");
-                  string = `\nf-icon[icon"${key}"][icon-style="${item}"]::before { content: "\\${unicode_layers?.[0]}"}
+                  string = `\nf-icon[icon="${key}"][icon-style="${item}"]::before { content: "\\${unicode_layers?.[0]}"}
 f-icon[icon"${key}"][icon-style="${item}"]::after { content: "\\${unicode_layers?.[1]}"}`;
                 }
                 else string = `\nf-icon[icon="${key}"]${item == "outline" ? '[icon-style="outline"]' : ""}::before { content: "\\${unicode}"}`;
