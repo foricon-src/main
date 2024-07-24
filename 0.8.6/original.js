@@ -320,8 +320,8 @@ f-icon[rotate="flipY"] {
                 let unicode = each.unicodes?.[item];
                 if (item.includes("duotone/")) {
                   let unicode_layers = unicode?.split("|");
-                  string = `f-icon["${key}"][icon-style="${item}"]::before { content: "\\${unicode_layers[0]}"}
-                  f-icon["${key}"][icon-style="${item}"]::after { content: "\\${unicode_layers[2]}"}`;
+                  string = `f-icon["${key}"][icon-style="${item}"]::before { content: "\\${unicode_layers?.[0]}"}
+                  f-icon["${key}"][icon-style="${item}"]::after { content: "\\${unicode_layers?.[2]}"}`;
                 }
                 else string = `f-icon["${key}"][icon-style="${item}"]::before { content: "\\${unicode}"}`;
                 s.innerHTML += string;
