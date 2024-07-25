@@ -99,8 +99,6 @@ f-icon {
   position: relative;
   justify-content: center;
   display: inline-flex;
-}
-f-icon::before, f-icon::after {
   font-family: "Foricon Alpha 8";
   line-height: 1em;
 }
