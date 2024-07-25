@@ -95,6 +95,7 @@ else {
   src: url("//foricon-src.github.io/main/0.8.6/font.ttf");
   font-weight: normal;
   font-style: normal;
+  text-rendering: ${d.settings.renderingOption == "performance" ? "optimizeSpeed" : "geometricPrecision"};
 }
 
 f-icon {
