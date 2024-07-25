@@ -29,9 +29,7 @@ else {
         year: date.getFullYear(),
       };
 
-      if (!d.pageviewStart) {
-        d.pageviewStart = crnt;
-      };
+      if (!d.pageviewStart) d.pageviewStart = crnt;
       if (crnt.month > d.pageviewStart.month || crnt.year > d.pageviewStart.year) {
         d.pageviewStart = crnt;
         d.pageviewCount = 1;
@@ -59,26 +57,24 @@ else {
               }
               setIcon(iconName) {
                 if (typeof iconName == "string") this.setAttribute("icon", iconName);
-                else error("Argument must be a valid string");
+                else error("Icon name is must be a valid string");
               }
               toggleIcon(icon1Name, icon2Name) {
-                if (arguments.length == 2) {
+                if (arguments.length == 2)
                   this.getAttribute("icon") == icon1Name ? this.setAttribute("icon", icon2Name) : this.setAttribute("icon", icon1Name);
-                }
-                else error("There are must be 2 arguments");
+                else error(`Missing arguments: ${!icon1Name ? "icon1Name" : "icon2Name"} is undefined`);
               }
               getStyle() {
                 return this.getAttribute("icon-style");
               }
               setStyle(styleName) {
                 if (typeof iconName == "string") this.setAttribute("icon-style", styleName);
-                else error("Argument must be a valid string");
+                else error("Icon name is must be a valid string");
               }
-              toggleType(style1Name, style2Name) {
-                if (arguments.length == 2) {
+              toggleStyle(style1Name, style2Name) {
+                if (arguments.length == 2)
                   this.getAttribute("icon-style") == icon1Name ? this.setAttribute("icon-style", style2Name) : this.setAttribute("icon-style", style1Name);
-                }
-                else error("There are must be 2 arguments");
+                else error(`Missing arguments: ${!style1Name ? "style1Name" : "style2Name"} is undefined`);
               }
             }
           );
