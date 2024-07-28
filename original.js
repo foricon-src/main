@@ -88,7 +88,7 @@ else {
 }
 @font-face {
   font-family: "Foricon Alpha 8";
-  src: url("//foricon-src.github.io/main/0.8.7/font.ttf");
+  src: url("//foricon-src.github.io/main/font.ttf");
   font-weight: normal;
   font-style: normal;
   text-rendering: ${d.settings.renderingOption == "performance" ? "optimizeSpeed" : "geometricPrecision"};
