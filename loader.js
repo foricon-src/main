@@ -2,11 +2,14 @@ const { uid } = document.currentScript.dataset;
 const { log, error } = console;
 
 (async () => {
+    log('Importing modules...');
+
     const { db, dbFirestore } = await import('https://foricon-src.github.io/foricon-firebase/script.js');
     const { ref, get } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
     const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
 
     try {
+        log('Getting data from server...');
         const resp = await fetch(`https://foricon-server-side.onrender.com/get-package?uid=${uid}`, {
             method: 'POST',
             credentials: 'include',
@@ -19,6 +22,8 @@ const { log, error } = console;
         }
 
         let { settings } = (await getDoc(doc(dbFirestore, 'users', uid))).data();
+
+        log('Finalizing...');
 
         customElements.define("f-icon", class extends HTMLElement {
             getIcon() {
@@ -392,6 +397,7 @@ const { log, error } = console;
             }
         }
         document.querySelector("head").appendChild(s);
+        log('Foricon Package has been loaded successfully');
     }
     catch (err) {
         error(err);
