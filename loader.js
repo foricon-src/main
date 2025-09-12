@@ -1,11 +1,15 @@
-import { db, dbFirestore } from "//foricon-src.github.io/foricon-firebase/script.js";
-import { ref, get } from "//www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
-import { doc, getDoc, setDoc } from "//www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+// import { db, dbFirestore } from "//foricon-src.github.io/foricon-firebase/script.js";
+// import { ref, get } from "//www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+// import { doc, getDoc, setDoc } from "//www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const { uid } = document.currentScript.dataset;
 const { log, error } = console;
 
 (async () => {
+    const { db, dbFirestore } = await import('//foricon-src.github.io/foricon-firebase/script.js');
+    const { ref, get } = await import('//www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
+    const { doc, getDoc } = await import('//www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
+
     try {
         const resp = await fetch(`/get-package?uid=${uid}`, { credentials: 'include' });
         const fonts = await resp.json();
