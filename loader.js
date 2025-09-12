@@ -18,7 +18,7 @@ const { log, error } = console;
             return;
         }
 
-        let { settings } = await getDoc(doc(dbFirestore, 'users', uid));
+        let { settings } = (await getDoc(doc(dbFirestore, 'users', uid))).data();
 
         customElements.define("f-icon", class extends HTMLElement {
             getIcon() {
@@ -29,7 +29,7 @@ const { log, error } = console;
                 else this.setAttribute("icon", iconName);
             }
             toggleIcon(icon1Name, icon2Name) {
-            let currentIcon = this.getIcon();
+                let currentIcon = this.getIcon();
                 if (!icon1Name) error(`Missing arguments: icon1Name is undefined`);
                 else if (!icon2Name) error(`Missing arguments: icon2Name is undefined`);
                 else this.setIcon(currentIcon == icon1Name ? icon2Name : icon1Name);
