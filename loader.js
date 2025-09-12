@@ -11,7 +11,7 @@ const { log, error } = console;
     const { doc, getDoc } = await import('//www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
 
     try {
-        const resp = await fetch(`/get-package?uid=${uid}`, { credentials: 'include' });
+        const resp = await fetch(`//foricon-server-side.onrender.com/get-package?uid=${uid}`, { credentials: 'include' });
         const fonts = await resp.json();
 
         if (fonts.error) {
