@@ -6,9 +6,9 @@ const { uid } = document.currentScript.dataset;
 const { log, error } = console;
 
 (async () => {
-    const { db, dbFirestore } = await import('//foricon-src.github.io/foricon-firebase/script.js');
-    const { ref, get } = await import('//www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
-    const { doc, getDoc } = await import('//www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
+    const { db, dbFirestore } = await import('https://foricon-src.github.io/foricon-firebase/script.js');
+    const { ref, get } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
+    const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
 
     try {
         const resp = await fetch(`//foricon-server-side.onrender.com/get-package?uid=${uid}`, { credentials: 'include' });
