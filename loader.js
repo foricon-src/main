@@ -56,8 +56,8 @@ const { log, error } = console;
                 if (animationName == null) this.removeAttribute("animation");
                 else if (typeof animationName != "string" || (speedName && typeof speedName != "string")) error("Invalid value format: animationName and speedName must be a valid string");
                 else if (!["spin", "spin-reverse", "ltfade", "fade", "hvfade", "ulfade", "csfade", "smbeat", "beat", "bgbeat", "fadebeat", "csbeat", "flipX", "flipY", "flipXY"].includes(animationName)) error(`Invalid value: "${animationName}" is not supported`);
-                else if (speedName && !["xxslow", "xslow", "slow", "semislow", "semifast", "fast", "xfast", "xxfast"].includes(speedName)) error(`Invalid value: "${speedName}" is not supported`);
-                else this.setAttribute("animation", `${animationName}${speedName ? '-' + speedName : ''}`);
+                else if (speedName && !["xxslow", "xslow", "slow", "semislow", "", "semifast", "fast", "xfast", "xxfast"].includes(speedName)) error(`Invalid value: "${speedName}" is not supported`);
+                else this.setAttribute("animation", `${animationName}${speedName ? `-${speedName}` : ''}`);
             }
             setSize(sizeName) {
                 if (sizeName == null) this.removeAttribute("size");
