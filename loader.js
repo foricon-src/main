@@ -2,14 +2,130 @@ const { uid } = document.currentScript.dataset;
 const { log, error } = console;
 
 (async () => {
-    log('(1/4) Importing modules...');
-
-    const { db, dbFirestore } = await import('https://foricon-src.github.io/foricon-firebase/script.js');
-    const { ref, get } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
-    const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
-
+    customElements.define("f-icon", class extends HTMLElement {
+        getIcon() {
+            return this.getAttribute("icon");
+        }
+        setIcon(iconName) {
+            if (typeof iconName != "string") error("Invalid value format: iconName must be a valid string");
+            else this.setAttribute("icon", iconName);
+        }
+        toggleIcon(icon1Name, icon2Name) {
+            let currentIcon = this.getIcon();
+            if (!icon1Name) error(`Missing arguments: icon1Name is undefined`);
+            else if (!icon2Name) error(`Missing arguments: icon2Name is undefined`);
+            else this.setIcon(currentIcon == icon1Name ? icon2Name : icon1Name);
+        }
+        getStyle() {
+            return this.getAttribute("i-s") || "solid";
+        }
+        setStyle(styleName) {
+            if (typeof styleName != "string") error("Invalid value format: Style name must be a valid string");
+            else this.setAttribute("i-s", styleName);
+        }
+        toggleStyle(style1Name, style2Name) {
+            let currentStyle = this.getAttribute("i-s") || "Solid";
+            if (!style1Name) error("Missing arguments: style1Name is undefined");
+            else if (!style2Name) error("Missing arguments: style2Name is undefined");
+            else this.setStyle(currentStyle == style1Name ? style2Name : style1Name);
+        }
+        setAnimation(animationName, speedName) {
+            if (animationName == null) this.removeAttribute("animation");
+            else if (typeof animationName != "string" || (speedName && typeof speedName != "string")) error("Invalid value format: animationName and speedName must be a valid string");
+            else if (!["spin", "spin-reverse", "ltfade", "fade", "hvfade", "ulfade", "csfade", "smbeat", "beat", "bgbeat", "fadebeat", "csbeat", "flipX", "flipY", "flipXY"].includes(animationName)) error(`Invalid value: "${animationName}" is not supported`);
+            else if (speedName && !["xxslow", "xslow", "slow", "semislow", "", "semifast", "fast", "xfast", "xxfast"].includes(speedName)) error(`Invalid value: "${speedName}" is not supported`);
+            else this.setAttribute("animation", `${animationName}${speedName ? `-${speedName}` : ''}`);
+        }
+        setSize(sizeName) {
+            if (sizeName == null) this.removeAttribute("size");
+            else if (typeof sizeName == "string") {
+                if (["smallest", "smaller", "small", "large", "larger", "largest"].includes(sizeName)) this.setAttribute("size", sizeName);
+                else error(`Invalid value: "${sizeName}" is not supported`);
+            }
+            else error("Invalid value format: sizeName must be a valid string");
+        }
+        setScale(scaleName) {
+            if (scaleName == null) this.removeAttribute("scale");
+            else if (typeof scaleName == "string") {
+                let scales = ["xsmaller", "smaller", "larger", "xlarger"];
+                if (scales.includes(scaleName)) this.setAttribute("scale", scaleName);
+                else error(`Invalid value: "${scaleName}" is not supported`);
+            }
+            else error("Invalid value format: scaleName must be a valid string");
+        }
+        rotate(value) {
+            if (value == null) this.removeAttribute("rotate");
+            else if (typeof value == "string" || typeof value == "number") {
+                let values = ["90", "180", "270", "flipX", "flipY"];
+                if (values.includes(value.toString())) this.setAttribute("rotate", value);
+                else error(`Invalid value: "${value}" is not supported`);
+            }
+            else error("Invalid value format: Value must be a valid string or number");
+        }
+        toggleIconOnHover(activeIconName, element = this) {
+            let t = this;
+            let currentIconName = this.getIcon();
+            
+            function i_meh() {
+                t.setIcon(activeIconName);
+            }
+            function i_mlh() {
+                t.setIcon(currentIconName);
+            }
+        
+            element.addEventListener("mouseenter", i_meh);
+            element.addEventListener("mouseleave", i_mlh);
+        
+            element._i_meh = i_meh;
+            element._i_mlh = i_mlh;
+        }
+        removeToggleIconOnHover(element = this) {
+            if (element._i_meh) {
+                element.removeEventListener("mouseenter", element._i_meh);
+                delete element._i_meh;
+            }
+            if (element._i_mlh) {
+                element.removeEventListener("mouseleave", element._i_mlh);
+                delete element._i_mlh;
+            }
+        }
+        toggleStyleOnHover(activeStyleName, element = this) {
+            let t = this;
+            let currentStyleName = this.getStyle();
+            
+            function s_meh() {
+                t.setStyle(activeStyleName);
+            }
+            function s_mlh() {
+                t.setStyle(currentStyleName);
+            }
+        
+            element.addEventListener("mouseenter", s_meh);
+            element.addEventListener("mouseleave", s_mlh);
+        
+            element._s_meh = s_meh;
+            element._s_mlh = s_mlh;
+        }
+        removeToggleStyleOnHover(element = this) {
+            if (element._s_meh) {
+                element.removeEventListener("mouseenter", element._s_meh);
+                delete element._s_meh;
+            }
+            if (element._s_mlh) {
+                element.removeEventListener("mouseleave", element._s_mlh);
+                delete element._s_mlh;
+            }
+        }
+    })
+    
     try {
-        log('(2/4) Getting data from server...');
+        log('[Foricon Package] Step 1/4: Preparing environment...');
+
+        const { db, dbFirestore } = await import('https://foricon-src.github.io/foricon-firebase/script.js');
+        const { ref, get } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
+        const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
+
+        log('[Foricon Package] Step 2/4: Verifying and fetching package data from server...');
         const resp = await fetch(`https://foricon-server-side.onrender.com/get-package?uid=${uid}`, {
             method: 'POST',
             credentials: 'include',
@@ -21,125 +137,9 @@ const { log, error } = console;
             return;
         }
 
-        log('(3/4) Finalizing...');
+        log('[Foricon Package] Step 3/4: Applying settings and finalizing styles...');
 
         let { settings } = (await getDoc(doc(dbFirestore, 'users', uid))).data();
-
-        customElements.define("f-icon", class extends HTMLElement {
-            getIcon() {
-                return this.getAttribute("icon");
-            }
-            setIcon(iconName) {
-                if (typeof iconName != "string") error("Invalid value format: iconName must be a valid string");
-                else this.setAttribute("icon", iconName);
-            }
-            toggleIcon(icon1Name, icon2Name) {
-                let currentIcon = this.getIcon();
-                if (!icon1Name) error(`Missing arguments: icon1Name is undefined`);
-                else if (!icon2Name) error(`Missing arguments: icon2Name is undefined`);
-                else this.setIcon(currentIcon == icon1Name ? icon2Name : icon1Name);
-            }
-            getStyle() {
-                return this.getAttribute("i-s") || "solid";
-            }
-            setStyle(styleName) {
-                if (typeof styleName != "string") error("Invalid value format: Style name must be a valid string");
-                else this.setAttribute("i-s", styleName);
-            }
-            toggleStyle(style1Name, style2Name) {
-                let currentStyle = this.getAttribute("i-s") || "Solid";
-                if (!style1Name) error("Missing arguments: style1Name is undefined");
-                else if (!style2Name) error("Missing arguments: style2Name is undefined");
-                else this.setStyle(currentStyle == style1Name ? style2Name : style1Name);
-            }
-            setAnimation(animationName, speedName) {
-                if (animationName == null) this.removeAttribute("animation");
-                else if (typeof animationName != "string" || (speedName && typeof speedName != "string")) error("Invalid value format: animationName and speedName must be a valid string");
-                else if (!["spin", "spin-reverse", "ltfade", "fade", "hvfade", "ulfade", "csfade", "smbeat", "beat", "bgbeat", "fadebeat", "csbeat", "flipX", "flipY", "flipXY"].includes(animationName)) error(`Invalid value: "${animationName}" is not supported`);
-                else if (speedName && !["xxslow", "xslow", "slow", "semislow", "", "semifast", "fast", "xfast", "xxfast"].includes(speedName)) error(`Invalid value: "${speedName}" is not supported`);
-                else this.setAttribute("animation", `${animationName}${speedName ? `-${speedName}` : ''}`);
-            }
-            setSize(sizeName) {
-                if (sizeName == null) this.removeAttribute("size");
-                else if (typeof sizeName == "string") {
-                    if (["smallest", "smaller", "small", "large", "larger", "largest"].includes(sizeName)) this.setAttribute("size", sizeName);
-                    else error(`Invalid value: "${sizeName}" is not supported`);
-                }
-                else error("Invalid value format: sizeName must be a valid string");
-            }
-            setScale(scaleName) {
-                if (scaleName == null) this.removeAttribute("scale");
-                else if (typeof scaleName == "string") {
-                    let scales = ["xsmaller", "smaller", "larger", "xlarger"];
-                    if (scales.includes(scaleName)) this.setAttribute("scale", scaleName);
-                    else error(`Invalid value: "${scaleName}" is not supported`);
-                }
-                else error("Invalid value format: scaleName must be a valid string");
-            }
-            rotate(value) {
-                if (value == null) this.removeAttribute("rotate");
-                else if (typeof value == "string" || typeof value == "number") {
-                    let values = ["90", "180", "270", "flipX", "flipY"];
-                    if (values.includes(value.toString())) this.setAttribute("rotate", value);
-                    else error(`Invalid value: "${value}" is not supported`);
-                }
-                else error("Invalid value format: Value must be a valid string or number");
-            }
-            toggleIconOnHover(activeIconName, element = this) {
-                let t = this;
-                let currentIconName = this.getIcon();
-                
-                function i_meh() {
-                    t.setIcon(activeIconName);
-                }
-                function i_mlh() {
-                    t.setIcon(currentIconName);
-                }
-            
-                element.addEventListener("mouseenter", i_meh);
-                element.addEventListener("mouseleave", i_mlh);
-            
-                element._i_meh = i_meh;
-                element._i_mlh = i_mlh;
-            }
-            removeToggleIconOnHover(element = this) {
-                if (element._i_meh) {
-                    element.removeEventListener("mouseenter", element._i_meh);
-                    delete element._i_meh;
-                }
-                if (element._i_mlh) {
-                    element.removeEventListener("mouseleave", element._i_mlh);
-                    delete element._i_mlh;
-                }
-            }
-            toggleStyleOnHover(activeStyleName, element = this) {
-                let t = this;
-                let currentStyleName = this.getStyle();
-                
-                function s_meh() {
-                    t.setStyle(activeStyleName);
-                }
-                function s_mlh() {
-                    t.setStyle(currentStyleName);
-                }
-            
-                element.addEventListener("mouseenter", s_meh);
-                element.addEventListener("mouseleave", s_mlh);
-            
-                element._s_meh = s_meh;
-                element._s_mlh = s_mlh;
-            }
-            removeToggleStyleOnHover(element = this) {
-                if (element._s_meh) {
-                    element.removeEventListener("mouseenter", element._s_meh);
-                    delete element._s_meh;
-                }
-                if (element._s_mlh) {
-                    element.removeEventListener("mouseleave", element._s_mlh);
-                    delete element._s_mlh;
-                }
-            }
-        })
         
         let s = document.createElement("style");
         s.innerHTML = `:root {
@@ -397,9 +397,9 @@ const { log, error } = console;
             }
         }
         document.querySelector("head").appendChild(s);
-        log('(4/4) Foricon Package has been loaded successfully');
+        log('[Foricon Package] Step 4/4: Foricon package loaded successfully!\n\nEverthing looks fine now, wanna look for some "decoration"? Just browse it here: Browse icons here: https://foricon-dev.blogspot.com/p/search.html');
     }
     catch (err) {
-        error(err);
+        error(`[Foricon Package] An error occurred: ${err.message || err}`);
     }
 })()
