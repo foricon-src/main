@@ -158,7 +158,7 @@ const { log, error } = console;
         const { settings, fonts } = json;
 
         log('[Foricon Package] Step 3/4: Applying settings and finalizing styles...');
-        
+        log(json)
         let s = document.createElement("style");
         s.innerHTML = `:root {
             --primary-color: inherit;
