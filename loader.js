@@ -3,7 +3,6 @@ const { log, error } = console;
 let foriconPackageIsLoadded = false;
 
 (async () => {
-
     customElements.define("f-icon", class extends HTMLElement {
         getIcon() {
             return this.getAttribute("icon");
