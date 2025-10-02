@@ -1,8 +1,8 @@
 const { uid } = document.currentScript.dataset;
 const { log, error } = console;
+let foriconPackageIsLoadded = false;
 
 (async () => {
-    let foriconPackageIsLoadded = false;
 
     customElements.define("f-icon", class extends HTMLElement {
         getIcon() {
