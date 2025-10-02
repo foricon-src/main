@@ -2,6 +2,8 @@ const { uid } = document.currentScript.dataset;
 const { log, error } = console;
 
 (async () => {
+    let foriconPackageIsLoaded = false;
+
     customElements.define("f-icon", class extends HTMLElement {
         getIcon() {
             return this.getAttribute("icon");
@@ -397,6 +399,7 @@ const { log, error } = console;
             }
         }
         document.querySelector("head").appendChild(s);
+        foriconPackageIsLoaded = true;
         log('[Foricon Package] Step 4/4: Foricon package loaded successfully!\n\nEverthing looks fine now, wanna look for some "decoration"? Just browse it here: Browse icons here: https://foricon-dev.blogspot.com/p/search.html');
     }
     catch (err) {
