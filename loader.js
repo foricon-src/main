@@ -144,7 +144,7 @@ let foriconPackageIsLoadded = false;
         const { ref, get } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
 
         log('[Foricon Package] Step 2/4: Verifying and fetching package data from server...');
-        const raw = await fetch(`https://foricon-server-side.onrender.com/get-package?uid=${uid}`, {
+        const raw = await fetch(`https://foricon-server-side.onrender.com/get-package?uid=${uid}&timezone=${new Date().getTimezoneOffset() / 60}`, {
             method: 'POST',
             credentials: 'include',
         })
