@@ -118,30 +118,46 @@ const { log, error } = console;
                 delete element._s_mlh;
             }
         }
+        set(options) {
+            if (!options) {
+                error("Missing arguments: option is undefined");
+                return;
+            }
+            const { icon, style, animation, size, scale, rotate } = options;
+            icon && this.setIcon(icon);
+            style && this.setStyle(style);
+            animation && this.setAnimation(animation.name, animation.speed);
+            size && this.setSize(size);
+            scale && this.setScale(scale);
+            rotate && this.rotate(rotate);
+        }
     })
+    function fIcon(options) {
+        const elem = document.createElement("f-icon");
+        elem.set(options);
+        return elem;
+    }
     
     try {
         log('[Foricon Package] Step 1/4: Preparing environment...');
 
-        const { db, dbFirestore } = await import('https://foricon-src.github.io/foricon-firebase/script.js');
+        const { db } = await import('https://foricon-src.github.io/foricon-firebase/script.js');
         const { ref, get } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js');
-        const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js');
 
         log('[Foricon Package] Step 2/4: Verifying and fetching package data from server...');
-        const resp = await fetch(`https://foricon-server-side.onrender.com/get-package?uid=${uid}`, {
+        const raw = await fetch(`https://foricon-server-side.onrender.com/get-package?uid=${uid}`, {
             method: 'POST',
             credentials: 'include',
         })
-        const fonts = await resp.json();
+        const json = await raw.json();
 
-        if (fonts.error) {
-            console.error("Package error:", fonts.error);
+        if (json.error) {
+            console.error('[Foricon Package] An error occurred:', json.error);
             return;
         }
+        const { settings, fonts } = json;
 
         log('[Foricon Package] Step 3/4: Applying settings and finalizing styles...');
-
-        let { settings } = (await getDoc(doc(dbFirestore, 'users', uid))).data();
         
         let s = document.createElement("style");
         s.innerHTML = `:root {
@@ -403,6 +419,6 @@ const { log, error } = console;
         log('[Foricon Package] Step 4/4: Foricon package loaded successfully!\n\nEverthing looks fine now, wanna look for some "decoration"? Just browse it here: https://foricon-dev.blogspot.com/p/search.html');
     }
     catch (err) {
-        error(`[Foricon Package] An error occurred: ${err.message || err}`);
+        error('[Foricon Package] An error occurred:', err);
     }
 })()
